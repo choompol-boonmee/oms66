@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>17. Hardware Requirement</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>17. Hardware Requirement</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">17. Hardware Requirements
+This clause describes the minimum hardware requirements for the subsystems and equipment comprising the TDMS. In this respect, the Contractor shall be solely responsible for selecting, supplying, and integrating all necessary and sufficient hardware capable of meeting the Authority&#8217;s overall TDMS requirements.
+To the extent possible, the Contractor shall meet Authority requirements by providing hardware products available from local manufacturers or local OEM suppliers capable of providing full support for these products on a long-term basis, i.e., after the required warranty period has expired.
+17.1 General Requirements
+The hardware requirements are not meant to be restrictive. The Contractor shall have proposed hardware better suited to the characteristics of the Contractor's standard configuration if it represents a superior compromise between performance and cost. For example, blade rather than rack servers may be utilized. Any such hardware, however, shall not release the Contractor from the obligation to satisfy the functionality, availability, capacity, expandability, performance, security, and other requirements of the Technical Specifications.
+All hardware shall be manufactured, fabricated, assembled, finished, and documented with workmanship of the highest production quality and shall conform to all applicable quality control standards of the original manufacturer and Contractor. All hardware components shall be new and suitable for the purposes specified. Within this context, the hardware shall have been accredited to quality standard ISO 9001, and all equipment shall utilize 230 VAC, 50 Hz as input power.
+Delivered hardware shall include all engineering changes and field changes announced by the manufacturer since it was produced. The hardware shall be audited for change orders immediately prior to the factory performance test and unimplemented change orders shall be installed at that time. As part of the field performance test, the Contractor shall have all hardware inspected and certified as acceptable for service under a maintenance contract by the local service offices representing the equipment manufacturers.
+17.2 Servers/Processors and Auxiliary Memory
+All necessary servers/processors and auxiliary memory in support of the SCADA, IS&amp;R, Network Analysis, Communications Network, Web Interface, and other TDMS functions shall be provided by the Contractor to satisfy the Authority&#8217;s capacity, performance, and availability requirements. Although dependent on the Contractor&#8217;s optimal design (to be approved by the Authority), the utilization of virtual machine servers and networking technology based on 10G Ethernet is preferred.
+As a minimum, physical servers and processors shall be &#8220;x86&#8221; compatible and shall be based on a 64-bit, multi-core architecture with main memory, auxiliary memory, terminals, and all interconnections so that they can support data and information exchange (such as status and program or data control information).
+All servers/processors shall be state-of-the art models selected for efficient operation of a real-time system. They shall include all necessary Client Access Licenses (CALs), and the latest security patches shall be installed. Generally, they shall be within the same model family. The Authority shall be able to replace or upgrade the servers/processors with future offerings to obtain increased computational power and system expansion with no required system or application software changes.
+Each server/processor shall include facilities for orderly shutdown and resumption of operations upon detection of power loss and subsequent resumption of power.
+No restrictions shall be placed on the allocation of server/processor main or auxiliary memory for any specific purpose.
+They shall be installed in rack mount enclosures provided by the Authority as part of each data center&#8217;s infrastructure (refer to Clause 17.19.3). Minimum installation requirements are as follows:
+1) Each rack shall include a 17-inch TFT color monitor, optical mouse, and keyboard as a server/processor and network management terminal. Monitor and keyboard shall be mounted for storage and ease of access using drawers of slide out type. The terminal shall manage all servers/processors in the rack via KVM (keyboard, video, and mouse) switches.
+2) If not already installed by the Authority, an overhead extractor fan kit shall enhance natural convection cooling by increasing the airflow in the rack.
+3) Grounding kit and any other necessary installation components shall be provided.
+4) Equipment with a redundant power supply option shall be supplied with this option utilized.
+5) All equipment with two network switching modules shall be configured to support No Single-Point of Failure (NSPOF). Necessary switches shall have a minimum interface speed of 1 Gbps.
+6) Dedicated high-speed interconnections shall provide for efficient transfer of data to the system&#8217;s Storage Area Network (SAN) and/or Network Attached Storage (NAS) infrastructure. These interconnections may be dedicated paths using Fiber Distributed Data
+Interface (FDDI) technology for example or may be implemented on network paths shared with other servers and processors. All such interconnections shall comply with applicable international standards.
+7) Server/processor auxiliary memory (NVMe preferred), including any RAID SSD units, shall be configured with a &#8220;hot-swap&#8221; maintenance capability. A hot spare SSD shall be included within any logical group of SSDs.
+8) The servers/processors shall have warning lights that indicate and help identify equipment component or subsystem faults.
+9) Redundant processors shall be housed in separate rack mount enclosures to enhance NSPOF capability.
+10) Servers/processors equipped with dual Network Interface Cards (NICs) shall be configured so that their functionality shall be maintained if either or both NICs are connected to the network.
+17.3 Front-End Processors
+Front-End Processors (FEPs) shall be dedicated to TDMS data communications with all Field Device Interfaces (FDIs) except for FDIs co-located with Switched Capacitor Banks (SCBs) and other devices dependent, for example, on third-party cellular communication facilities.
+The FEPs shall check for and report protocol and other communication errors and convert the communications protocol to a common internal format compatible with the data processing functions of the TDMS. In this way, the FEPs can process the received data, in whole or in part, and store the processed data into the TDMS database or pass the data on to other TDMS resources for further processing (e.g., alarm annunciation) and storage into the database. To protect the security perimeter associated with the SCADA functionality of the TDMS, the FEPs may also serve as firewalls.
+It shall be possible for maintenance engineers to monitor the performance of each communications circuit or channel, to enable and disable ports, and to switch to standby ports. Communications performance statistics shall be collected and presented in a form designed to facilitate the identification of the communication circuits or channels that suffer from high error rates.
+
+17.4 Communication Network Processors
+Communication Network Processors (CNPs) shall be dedicated to data exchange with external computer systems, such as EGAT&#8217;s EMS and the Authority&#8217;s future MDMS, and with network access nodes, such as those of local data communication service providers in support of TDMS communications with SCB Interfaces. All CNPs shall be from the same model family, use the same Operating System, and use commercially available hardware for their communication channel interfaces. To maintain system security and prevent any unwanted CNP data traffic, firewalls shall be used.
+
+17.5 Backup and Archive Storage
+Storage devices shall be used for on-line backup of the TDMS data and software and for archival storage of IS&amp;R data. The Contractor&#8217;s backup and archive storage solution shall comply with the following minimum requirements:
+1) Shall support Storage Array Network (SAN) technology and, as applicable, Network Attached Storage (NAS) technology.
+2) Include redundant (fault tolerant) RAID 0, 1, 5, or better technology
+
+3) In the case of IS&amp;R, have the capacity to retain stored data as indicated in Exhibit 15-7. This is in addition to the existing two (2) years of data (at least 1 TByte) that shall be migrated from the existing SCADA/EMS/DMS systems. The Contractor&#8217;s proposal shall have included an estimate of the required IS&amp;R capacity based on experience with similar projects. As found necessary, adjustments shall be made during implementation of the TDMS project.
+4) In the case of system backup and archiving, have the capacity for two (2) years of model and configuration data.
+5) Have the necessary throughput, capacity, and redundancy to meet overall system performance requirements (refer to Clause 15).
+6) Include ports of fiber channel host interfaces where applicable.
+7) Include redundant hot-pluggable power supply technology.
+8) Include a redundant cooling system.
+9) Support local and remote data replication.
+10) Where applicable, support mirrored write-back cache.
+11) Include controller password protection for configuration control.
+12) Include monitoring and controlling units and software with respect to reporting storage health, performance, and utilization statistics.
+The TDMS shall also include rewritable single-platter DVD drives for general storage purposes. The DVD drives shall be capable of reading and writing with CD-ROM media. In addition, a management system for such media as tape and DVD shall be provided for the off-line storage of archive data.
+
+17.6 Local and Wide Area Networks
+The Contractor shall be responsible for implementing all necessary LANs at each data center and control center. This includes provision of all associated equipment allowing the TDMS at each center to connect with the Authority&#8217;s Corporate WAN facilities, such as the optical fiber backbone communications system. It also includes all equipment and devices that will be needed to interface the
+TDMS with the high-speed data links that the Contractor is responsible for setting up via others to provide TDMS access to the required cellular networks of local service providers.
+17.6.1 TDMS LANs
+Each data center and control center LAN shall be redundant in configuration and, as preferred by the Authority, shall be based on 10G Ethernet (IEEE 802.3) technology. The Contractor shall provide all necessary firewalls, routers, network switches, etc. LAN cabling shall also be 10G compatible.
+Each LAN comprising the redundant LAN shall be implemented with separate hardware, including chassis and power supply. Where modular network hardware is supplied, the circuit boards shall be &#8220;hot&#8221; swappable, such that it is not necessary to power down the entire chassis to replace a single card. The network design shall provide dedicated bandwidth for each LAN segment (switched technology) and facilitate the addition of future LAN segments.
+The malfunction of any piece of equipment connected to a LAN shall not disrupt LAN operations. Similarly, on/off powering or connection/removal of equipment shall not be disruptive.
+On-line reconfiguration and enhancement of network hardware and software shall be supported via authentication and password-protected administrative interfaces. The network hardware shall support the Contractor&#8217;s configuration software management tools.
+17.6.2 TDMS WAN
+To create the TDMS WAN, the Contractor shall connect the TDMS LANs to the Corporate WAN, i.e., the Authority&#8217;s optical fiber backbone communications system. This shall include all necessary firewalls, routing switches, and cabling. Communications shall be IP-based.
+17.7 Firewalls
+17.7.1 General
+The Contractor shall provide dedicated and redundant hardware modules for firewalls along with all supporting network equipment including routers and network switches. Where the network design has cascaded firewalls, the Contractor shall utilize firewalls that are from different vendors to maximize security. Moreover, the hardware used for firewalls shall be different depending on the specific type of interface, data traffic, and points of access being monitored and controlled from a TDMS security perspective. For example, the hardware used for the DMZE firewalls shall be different from the hardware used for security monitoring and control of the data traffic between the TDMS and its FDIs, where performance requirements are also critical.
+Within this context, centralized security management software is also required. This Contractor software shall control system security related to all network equipment as well as TDMS servers and devices. Supported by log servers, the software shall include log analysis, report generation, and other security related functions as necessary to prevent, detect, and mitigate security attacks.
+All firewalls shall support the necessary throughput and redundancy to meet overall system performance requirements. The number of ports provided shall have fifty (50) percent spare for usage by the Authority in the future.
+They shall gracefully and automatically re-establish required connections as needed and in compliance with secure connection establishment procedures.
+The Contractor shall supply a list detailing the interface ports and services required for full and secure TDMS functionality. This list shall include all information required to define the firewall rules including direction, protocol, interface port number, and associated service for each network connection.
+17.7.2 Next Generation Firewalls
+The firewalls shall be of next generation type using advanced security and control capabilities at throughput speeds that will allow authenticated users, computers, and applications to access TDMS services with no perceivable delays. In this respect, each Next Generation Firewall (NGFW) shall include the following features:
+
+1) Highly effective security backed by extensive threat intelligence to reduce the risk of a data breach.
+2) Integrated Intrusion Prevention System (IPS), Web filtering, reputation due to detection of suspicious activity originating from an IP address (such as spam or virus), and other advanced threat protection as may be available.
+3) Deep inspection of network traffic to identify applications, users, devices, and threats through granular policy controls.
+4) Single Operating System and consolidated user interface for all security and networking capabilities.
+5) Centralized &#8220;single-pane-of-glass&#8221; management and reporting capabilities to visualize the NGFW&#8217;s security effectiveness and help determine what strategic security policies to implement, such visibility making it easier to control device configurations, security policies, firmware installations, and content security updates as well as monitor what is happening in the network through logging, in-depth reporting, and event management.
+6) Highly reliable core firewall capabilities such as:
+a) Authentication &#8211; Enforcement of user and application password construction rules such as minimum length, inclusion of non-alphanumeric characters, and maximum validity period.
+b) Access Control &#8211; Different TDMS/firewall access levels for internal and external users (both persons and applications) including none, read only, read/write, and execute. Internal TDMS users shall be denied access to the Internet.
+
+c) IP Spoofing &#8211; Protection against attacks in which a would-be intruder outside the firewall configures its machine with IP addresses on the internal TDMS LANs.
+d) Prevention of Denial of Service &#8211; Protection against attacks that are characterized by attempts to deny service through overrunning buffers, filling the firewall disk, or overrunning log files, such attacks resulting in rejection of packets where they can be recognized or, where they are not recognized, resulting in shutting down or denying external access when overruns occur rather than continuing to operate with partial capability.
+e) Packet Filtering Restriction &#8211; Based on both source and destination IP addresses.
+f) Stateful Inspection &#8211; Determining which port numbers are used by which connections and, when a connection closes, shutting down access to the port used by the connection until another authorized user establishes a new connection.
+g) Proxy Servers &#8211; Application proxies including HTTP, FTP, UDP, TCP, and others as needed for the relevant TDMS functions, access to these services being customizable based on user ID and IP address.
+h) Network Address Translation (NAT) &#8211; Permitting the Authority to hide the IP addresses used on the internal TDMS LAN from external view.
+i) Notifications &#8211; Recording all break-in attempts in a log file.
+17.7.3 Firewall Configuration
+The Contractor shall be responsible for the configuration of firewalls with Authority assistance to define the access rules. The Authority expects the following general access rules to be implemented:
+1) Remote control of the power system from external points of access shall only be allowed by properly authorized personnel at the TDMS control centers.
+2) Access from the TDMS to systems and networks on the Corporate WAN shall be allowed. This shall not include access to the Internet.
+3) Access to the TDMS from users and systems on the Corporate WAN shall be limited by IP address and user (or account) name.
+4) Corporate users at selected nodes (IP addresses) shall be permitted access to the IS&amp;R function as replicated in the DMZE for read-only purposes. The IS&amp;R access control facilities as installed in the DMZE shall be used to further limit access.
+5) Corporate users at selected nodes shall be permitted access to the Web services to be installed in the DMZE.
+17.8 Field Device Interface Communications
+17.9 Time and Frequency Support
+As noted elsewhere in these Technical Specifications, the Authority will have a time and frequency facility at each data center for use as a common resource. In particular, this facility will provide Universal Coordinated Time (UTC) obtained from the satellite constellation comprising the Global Positioning System (GPS). In this respect, it can be assumed that the time receiver will provide an overall accuracy of &#177;40 ns (&#177;150 ns peak) when tracking satellites and shall include an offset to permit correction to local time.
+17.10 Remote Workstations
+Dispatcher/Supervisor and data engineering workstations, as remote clients, shall include all hardware and software necessary to facilitate optimum user communications with the servers comprising the TDMS at each data center. They shall include facilities to detect the loss of input power, execute an orderly shutdown upon loss of input power, and automatically resume operation when power is restored.
+
+17.11 Workstation Furniture
+As in Clause 6.1 and Exhibit 15-2, consoles and chairs are required as furniture supporting all control room workstation positions. In this respect, the workstation and PC equipment at each Dispatcher/Supervisor position in the TDMS control rooms shall be installed in ergonomically-designed furniture, suitable for 24-hour, 7days per week service with minimum wear. The furniture shall be provided to include all parts and accessories required for installation and use of the workstation. The essential features of the furniture shall be as follows:
+1) Modular low-profile open top design presenting a modern contoured appearance with no exposed fasteners on any surface.
+
+17.12 Dispatcher PCs
+The Contractor shall provide state of the art desktop (tower) PCs that Dispatchers will use to access the Corporate WAN independently of the TDMS. These PCs shall have no direct connection to the TDMS. Monitors and keyboards shall be mounted on the same furniture used to install the Dispatcher workstations.
+The PCs shall represent the latest technology available at the time the Contractor orders them. They shall comply with the following minimum requirements:
+1) Monitor: As per Remote Workstation, i.e., 27&#8221; LED, FHD (1920 x 1080).
+2) Processor: Intel 7th Generation CoreTM i7, or equivalent.
+3) Memory: 8 GB (expandable).
+4) Storage of SSD type: 256 GB.
+5) Graphics: NVIDIA, or equivalent (2GB).
+
+6) Display support: DVI/HDMI, DisplayPort.
+7) Ports: 3 x USB, 1 x HDMI, 1 x Ethernet, 1 x Serial, headphone/microphone.
+8) Network: 1G or better Ethernet.
+9) Disk drive: Internal DVD+/-RW.
+10) Keyboard: Wireless, both English and Thai.
+11) Mouse: Wireless optical.
+12) Operating System: As per Remote Workstations (refer to Clause 6).
+13) Software: MS Office (Thai) including licenses.
+14) Antivirus software: All latest security patches.
+
+17.13 Network Test Sets
+The portable PCs for operating, testing, and maintaining the TDMS and its FDI interfaces, from the perspective of diagnosing communication problems, shall be notebook computers with complete access security. Each Network Test Set (NTS) shall be complete with the same Operating System as a TDMS workstation. They shall include protocol analyzer software and network sniffer software. The protocol analyzer software shall support analysis of the ICCP and DNP 3.0 data traffic over the TDMS IP network.
+
+17.14 Video Display Wall
+17.15 Printers
+
+17.16 Data Acquisition Simulators
+In addition to the hardware and software supporting the TDMS architecture, the Contractor shall provide portable Data Acquisition (DAC) simulators to be used as field device interface test sets.
+These simulators, in essence, shall provide the same SCADA functionality as the TDMS so that, by connecting locally to the communication ports of an individual field device interface (i.e., at the site
+where the interface is located), they can be used to verify that the field device interface data and control points are properly mapped from a TDMS database perspective and, in this respect, can be exercised and shown to be fully operational as though they were being exercised from the TDMS itself.
+
+17.17 Spare Parts
+The Contractor&#8217;s proposal shall have included a recommended list of spare parts for maintenance and repair of the equipment to be delivered as part of the TDMS scope of supply. The recommended list shall be sufficient to cover a two-year period corresponding to the total quantity of TDMS equipment to be delivered. The availability of these parts shall be guaranteed for a period of no less than ten (10) years from the date of the latest delivery of the TDMS equipment or assemblies containing these parts. The Contractor shall commit to notifying the Authority at least six (6) months in advance of any part or assembly becoming unavailable for purchase.
+17.18 Special Tools and Accessories
+In addition to the specified TDMS hardware, the Contractor shall supply any special tools and accessories, including peripheral devices or equipment that may be required for the installation, testing, commissioning, proper operation, and maintenance of the TDMS. This shall also include all relevant software tools and utilities.
+17.19 Operating and Construction Requirements
+All TDMS equipment shall operate and be constructed in accordance with the following requirements.
+17.19.1 Environment
+
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

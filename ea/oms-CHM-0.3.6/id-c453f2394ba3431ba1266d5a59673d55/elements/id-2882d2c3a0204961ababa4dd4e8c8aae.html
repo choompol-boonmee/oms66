@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>14. Configuration, Redundancy and Failure Management</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>14. Configuration, Redundancy and Failure Management</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">14. Configuration, Redundancy, and Failure Management
+The ability of the TDMS to perform its specified tasks under normal conditions and under conditions of hardware and software failure is of paramount importance to the Authority. This clause presents requirements for managing and monitoring TDMS hardware and software resources. In this respect, the
+TDMS shall be supported by the centralized management functions of the SME described in Clause 3.1.5.
+
+14.1 Resource Groups and Interconnections
+System resources shall be grouped in such a way as to meet system redundancy and/or performance requirements. In this respect, a group consisting of two or more similar resources (e.g., a group of servers) may perform a subset of TDMS functions or tasks in a primary/backup manner, where the backup resource is only active in the event the normally active resource, i.e., the primary resource, has failed or been taken off-line. Alternatively, in a distributed manner, where the functions or tasks performed by the group are shared among the group&#8217;s multiple resources, all of which are normally active. A resource within a group may also consist of a group of resources, e.g., a group of virtualized servers each of them hosting a group of virtual machines.
+Interconnections, including those involving local and wide area networks, shall be provided among all resources within a group of resources, among all groups, and among all groups and all workstations. The state of each group or its individual resource connection to a network and the network itself shall be changeable by the user.
+
+14.2 Operating State
+The operating state of TDMS resources such as servers, processors, and peripheral devices shall be monitored continuously to determine the system's condition when restart and failover operations take place. This includes network devices such as routers, switches, and firewalls. Network interfaces may be considered as peripheral devices or as part of a processor or other device.
+The definition of states will depend on the Contractor&#8217;s TDMS design. For example, in the case of virtualized servers, the state of the virtual machines that they host shall also be monitored.
+
+Within this context, the following states or their equivalent shall be supported:
+1) Normal &#8211; The resource is operating per its normally assigned role, e.g., as a primary resource or as a backup resource in hot standby mode, or as an active resource among a shared group of replicated resources all of which are operating in their group&#8217;s normal state and ready to serve as a shared backup facility should one or more of them fail.
+2) Abnormal &#8211; The resource is operational but not in its normally assigned role, or in conditions that are not normal, e.g., a backup resource is now the primary resource due to primary resource failure, or a shared resource is operational in a situation where one or more of the resources in its group have failed. Such abnormal states may result from a user command.
+3) Failed &#8211; The resource is non-operational, e.g., it is not communicating with other elements of the TDMS and is not capable of participating in any TDMS activity.
+
+14.3 Database Backup
+Database backup shall be supported so that TDMS operation may continue without issue in the event of a hardware or software failure. The backup database shall always be kept synchronized with the primary database. Failure of a resource shall not preclude access to current data by the resource or resources assuming the function of the failed resource. The backup database shall be protected from corruption due to such failures. The backup database as well as primary database shall be preserved during system input power disruptions of any duration.
+
+Changes to the quantity of information to be backed up because of adding or deleting database items shall be automatically accommodated by the backup function. The addition, deletion, or restructuring of the TDMS database shall be accommodated by the backup function without requiring changes to any software code.
+14.4 Error Detection and Failure Determination
+All resources shall be monitored for fatal and recoverable errors. All detected errors, including those leading to failures, shall be recorded for maintenance purposes. These records shall include the dates and times of the errors, reasons for the errors, and details concerning any resulting failures and subsequent automatic or manual return to service.
+14.4.1 Hardware Errors
+All fatal and recoverable errors of all hardware resources shall be detected. Each type of recoverable error shall be assigned a threshold. When the count of recoverable errors exceeds this threshold, a fatal error shall be declared, and steps taken to initiate whatever failover procedure may apply. Where multiple hardware resources share a common communications channel, the quantity of failed resources that constitute failure of the communications channel shall be individually specified for each channel.
+
+14.4.2 Software Errors
+Execution errors in functions that are not resolved by program logic internal to the function shall be considered fatal software errors. Examples of errors that may be resolved by internal program logic include failure of a function to achieve a solution due to violation of an iteration limit or arithmetic errors (such as division by zero). These errors shall produce an alarm informing the user of the error, but they shall not be considered fatal software errors.
+Fatal software errors shall result in either termination of the function or shall be handled as a fatal resource (e.g., server/processor) error. The action to be performed shall be defined for each function. If the function is to be terminated, future executions of the function shall also be inhibited until the function is again initiated.
+14.4.3 Reasonability of Data
+All input data and parameters, whether collected automatically or entered by a user, shall be checked for reasonability and rejected as errors if they are unreasonable. All intermediate and final results shall be checked to prevent unreasonable data from being propagated or displayed to the user.
+
+When unreasonable input data or results are detected, diagnostic messages clearly describing the problem shall be generated. All programs and the TDMS shall continue to operate in the presence of unreasonable data. All calculations using the unreasonable data shall be temporarily suspended or shall continue to use the last reasonable data.
+14.5 Server/Function Redundancy and Failover
+When failure of a resource, such as a physical or virtualized server or any function, in a redundant group of resources is detected, the TDMS shall invoke appropriate failover procedures so that functions or tasks assigned to the failed resource are preserved without disruption. The failed resource shall be marked as &#8220;failed&#8221; (or equivalent, such as &#8220;down&#8221;). The state of all resources used to preserve the functions of the failed resource shall be changed from &#8220;normal&#8221; to &#8220;abnormal&#8221;, or equivalent.
+
+If a resource of the TDMS is damaged or performance degraded due to a cyber security incident, the affected resource shall be rapidly isolated from the rest of the TDMS, and the resource function or task subsequently restored in a timely manner.
+Failover due to failure of a single resource, and subsequent restoration and restarting of the failed resource (or any replacement), shall not interrupt on-going system utilization.
+14.5.1 Function Restart
+Function restart, i.e., function assignment to servers and subsequent initiation, shall be invoked during system startup, manually by a user, and automatically to recover from hardware and software failures. Function restart shall proceed to completion without user intervention.
+
+The restart logic shall determine the desired state of the assigned resources and the function or functions to be initiated. It shall also preclude conflicts among resources and functions, such as assigning too few or too many resources and erroneous duplication of functions in multiple resources. Immediately after initialization, the functions to be restarted shall be scheduled for execution.
+14.5.2 Server Restart
+Upon detection of a server failure, all servers providing for redundancy (and associated peripheral devices and interconnections) shall be reconfigured as necessary to support the server function or functions to be restarted. If servers are not available or prove insufficient to support function restart, the TDMS shall attempt to restart the failed server, which may require restart by user command only.
+Server start-up shall be performed such that the operating environment of the server is established prior to restarting its functions. Establishment of the operating environment may include execution of self-diagnostics, reloading the Operating System, and connection to and verification of communications with all appropriate networks. After server start-up, a function restart shall bring all relevant servers and functions to their appropriate state.
+14.6 Device Redundancy and Failover
+Devices shall be configured as redundant or non-redundant. When failure of a redundant device is declared, the TDMS shall invoke the appropriate device failover procedures so that on-line functions using the failed device are preserved. Server or function failover shall not be necessary to recover from device failure. On-line functions using a failed non-redundant device may be lost until the failed device is restored to service.
+14.6.1 Device Failover
+Device failover shall invoke an orderly transfer of operation to a backup device in the event of any primary redundant device failure. Multiple levels of failover shall be supported, i.e., if a primary device fails and its backup device then fails or if the backup device is failed at the time of failure of the primary device, the system shall attempt to use the backup assigned to the backup device. All functions associated with both failed devices shall then be directed to use the new device.
+Device failover shall accommodate the following special cases:
+1) Printers &#8211; Instead of an automated failover process, the user shall be able to direct output to any printer. However, the print services shall preclude the loss of information due to printer failures. This shall include information transferred to a printer, but not yet printed at the time of printer failure.
+2) Workstations &#8211; Although workstations are configured as non-redundant devices, the failover logic shall ensure that all areas of responsibility assigned to the user of the failed workstation can be assigned to other workstations. If one or more areas are not assigned, the areas shall be assigned to a default user, and an alarm shall be generated.
+
+14.6.2 Device and Communications Reinstatement
+Except for communications with data sources and other computer systems connected to the TDMS via the Corporate or TDMS network, failed devices shall be reinstated by user command only. Otherwise, failed communications to data sources or computer systems shall be periodically retried. When reliable communications are re-established, the data source and communications shall be automatically returned to normal operation with the TDMS.
+Data sources may require the download of configuration information as part of the reinstatement process. Such configuration information may include report-by-exception dead bands.
+14.7 System Restart
+The TDMS shall automatically restart itself when input power is interrupted and restored. System restart shall include server and function start-up, initialization of all network devices, initialization of all peripheral devices, initialization of all communications with external data sources and computer systems, resumption of TDMS operation, and notification to the users that start-up has completed.
+14.8 System Availability
+14.8.1 General Requirements
+Each TDMS function shall be classified as either critical or non-critical.
+Every critical function shall be supported by sufficient redundancy to ensure that any single failure will only briefly interrupt the availability of that function. In this respect, critical functions associated with each data center shall be supported by at least two (2) independent resources, with all necessary input/output facilities, providing for redundancy. Failure to complete a critical function within a predefined time interval shall result in automatic transfer of its execution to an alternative resource if available. This shall include the capability to utilize backup resources at the other data center.
+Non-critical functions need no redundancy in each TDMS data center because they may be terminated until restarted manually or may be executed at low priority until any necessary equipment repairs have been completed. On the other hand, depending on Contractor-provided backup features between data centers, the failure of resources used for non-critical functions at one data center may result in a manual and/or automatic restart of these functions on corresponding resources at the other data center.
+
+The operation of all critical and non-critical functions shall be monitored, and all detected failures of these functions shall be separately logged (itself a critical function) for availability measurement and maintenance support purposes. These log entries shall include the dates and times of the failures and of the subsequent automatic or manual return to service.
+Each automatic transfer to backup resources of one or more critical functions interrupted by a failure shall be completed with no loss of data. As a minimum, data coherency shall be maintained by performing integrity checks before committing and allowing for transaction rollbacks if needed. Functions that were scheduled to execute during the time that a transfer is occurring shall automatically execute following completion of the transfer.
+For the system to be available, user TDMS interfaces via workstations must be stable. Restarts of other system components to clear workstation faults must be absolutely minimized.
+14.8.2 Availability Requirements
+The Contractor&#8217;s proposal shall have described all failover features of the proposed TDMS design. This shall include the availability features associated with both critical and non-critical functions. Also refer to Clause 2 and 14.8.1.
+
+On an individual data center basis, i.e., failover/backup capabilities between data centers notwithstanding, each TDMS platform shall be designed so that the total accumulative downtime of all critical functions, if executed on this platform only, does not exceed four (4) hours and twenty-three (23) minutes in any one (1) year period, resulting in an availability of 99.95%. As evidence of how the proposed TDMS at each data center meets this requirement, the Contractor&#8217;s proposal shall have included detailed availability calculations.
+
+Moreover, the Authority&#8217;s availability requirement for the TDMS in its normal mode of operation shall be met, i.e., where the TDMS platforms at both data centers are active and serving as a common resource. Thus, the total accumulative downtime of all critical functions, as executed on the TDMS at either data center or possibly, depending on the TDMS design, at both data centers, shall not exceed fifty-three (53) minutes, representing an availability of 99.99%, in any one (1) year period or proportionally during the required Availability Test (refer to Clause 22.11). In addition to running the Availability Test to verify that the TDMS as actually delivered and handed-over to the Authority meets this requirement, the Contractor&#8217;s proposal shall have included corresponding availability calculations.
+Within this context, the TDMS shall be considered available when all functions identified in Clause 14.8.2.1 are operating as specified in accordance with their scheduled periodicities and required execution times, while all associated hardware specified in Clause 14.8.2.2 is also available.
+
+The TDMS shall have no single point of failure, i.e., there shall be no hardware or software element that, because of its failure, renders the TDMS unavailable. This requirement shall specifically include all Contractor-supplied hardware, including power supplies, as installed and interconnected in data center enclosures provided by the Authority.
+On an individual basis, all TDMS resources such as servers and devices on the TDMS network shall exhibit an availability of no less than 98%, where availability is calculated as: (1- ratio of down time to required operational period) multiplied by 100. The ability of TDMS individual resources to meet this requirement shall be verified during SAT.
+14.8.2.1 Functional Availability
+With respect to functional availability, TDMS functions normally sharing resources in such a way that they can execute on servers replicated within and/or across the two data centers, so that they are not affected by any single failure, are explicitly defined as critical. As a minimum, these functions include:
+1) Failover and system restart functions without loss of data.
+2) System configuration control.
+3) Processing of acquired telemetered data (including calculations, database updates, limit processing, alarming, refreshing of displays, etc.).
+4) All SCADA functions including data acquisition and supervisory control via field device interfaces.
+5) Data exchange with the EGAT EMS and the Authority&#8217;s GIS, OMS, AMS, and MDMS (independently of such external systems being redundant).
+6) Information Storage and Retrieval.
+7) Data storage functions supporting critical functions.
+8) All HV/MV network applications in their real-time, study, and simulation modes.
+9) User Interface functions supporting critical functions.
+10) On-line diagnostics.
+14.8.2.2 Hardware Availability
+The TDMS hardware shall be considered available when sufficient resources and interfaces to data sources, remote workstations, and computer systems external to the TDMS are operating and the TDMS is satisfying its performance requirements. The term sufficient, as used in this paragraph, shall be interpreted as requiring the following minimum hardware complement to be operating:
+1) At least one fully operational server (whether physical or virtualized) corresponding to each TDMS group of redundant/replicated servers.
+2) Auxiliary SSD (NVMe preferred) memory sufficient to support the operating servers. In case of RAID memory units, no more than one SSD in each enclosure (chassis) shall be down.
+3) At least one archive device.
+4) At least one internal time and frequency facility.
+5) Sufficient FEPs, channel interfaces, and other devices such that TDMS communications with all field device interfaces and other systems are supported.
+6) Connections to the TDMS network sufficient to support communications with all nodes on the network including the external nodes on the Corporate WAN.
+7) At least 50% of the remote workstations at each control center.
+8) At least one multifunction printer at each control center.
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

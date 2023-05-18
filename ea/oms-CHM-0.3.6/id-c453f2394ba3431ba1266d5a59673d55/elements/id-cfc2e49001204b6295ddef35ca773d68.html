@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>3. Data Center Configuration</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>3. Data Center Configuration</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">3. Data Center Configuration
+This clause presents a conceptual high-level overview of each TDMS data center from a server
+configuration perspective.
+3.1 General Concept
+In general, the TDMS platform at each data center shall consist of virtual machines configured on
+several physical servers and interconnected via redundant Virtual Local Area Networks (VLANs)
+suitably segregated and secure to meet the System&#8217;s functional requirements. Unless otherwise
+required, Open rather than OEM licensing shall apply.
+A conceptual configuration based on server virtualization is illustrated in Exhibit 3-1, noting that the
+exhibit does not identify servers such as those as may be required to support the User Interface facilities
+located remotely at the SMC and ADDC control rooms, nor does it identify a configuration in which,
+for example, the Virtualized Simulator Environment (SIE) may be in a separate security zone (as
+determined by the Contractor&#8217;s best security practices) and suitably interfaced, as described elsewhere
+in these Technical Specifications, to control-room (Dispatcher) workstations as well as those in the
+Authority&#8217;s training center.
+3.1.1 Production Environment (PDE)
+3.1.2 Process Environment (PCE)
+3.1.3 Pre-Production Environment (PPE)
+3.1.3.1 DVS Functions
+3.1.3.2 QAS Functions
+3.1.4 DMZ Environment (DMZE)
+3.1.5 System Management Environment (SME)
+3.1.6 Simulator Environment (SIE)
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

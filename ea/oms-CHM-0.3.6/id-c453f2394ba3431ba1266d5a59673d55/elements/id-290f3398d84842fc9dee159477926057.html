@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>15. Capacity and Pefrormance</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>15. Capacity and Pefrormance</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">15. Capacity and Performance
+The TDMS shall be designed to meet the capacity and performance requirements defined in this clause. These requirements are based on estimated data sizing, data exchange periodicities, and functional performance characteristics for bench marking and do not necessarily match with the characteristics that will be experienced during actual operation of the TDMS. To ensure full understanding, the Contractor and Authority shall have worked together to review and agree on the final list of capacity requirements prior to contract signing.
+The hardware and software configuration of the TDMS shall not impose restrictions that prevent the system from growing in capacity and performance to meet future Authority needs on a continuous and expanding basis, i.e., as new functions and data communications are added and the delivered capabilities of the TDMS become limiting, the Contractor&#8217;s TDMS design shall enable the convenient addition of servers, processors, new or enhanced functionality, main and auxiliary memory, peripherals, and communications interface equipment.
+Authority personnel shall be able to make all database and system changes to support the anticipated system growth through interactive procedures supplied with the TDMS and without assistance of the Contractor. No change in program code shall be necessary to implement such expansion. The Contractor shall provide all related documentation and shall demonstrate the expansion capabilities and features as specified to the Authority&#8217;s full satisfaction.
+All TDMS capacity and performance requirements shall be verified (tested) with all supplied security features enabled, such features as virus scanning, malware detection, system file integrity checking, firewall rule sets, intrusion detection, intrusion prevention, and security incident logging and reporting. An estimate of the overhead associated with the execution of the security features shall be calculated for review during system testing.
+15.1 General Expansion Characteristics
+TDMS expansion requirements are based on the most probable growth rates, the potential for new applications, and the desire to balance delivered TDMS costs against capabilities and, within this context, extend the life of the delivered TDMS with minimal disruption to system operations. Thus, the following expansion characteristics shall apply:
+1) Servers/Processors &#8211; A growth path shall be provided with the delivered TDMS that allows the upgrading of computational power and main memory by means of field expansion and/or replacement of servers (or any processor unit). Such upgrades shall be possible by simply "changing out" the server and/or adding server processing capacity while retaining software and hardware compatibility. To the extent possible, upgrades based on installing additional components (such as CPUs) or replacing such components with their latest versions shall be taken into consideration.
+2) Computer Peripheral Equipment &#8211; All peripheral equipment shall be standard products with standard interfaces capable of being replaced with more powerful and/or newer models without requiring additional hardware or software changes.
+3) Communications Equipment &#8211; All data communications equipment shall be selected and integrated in such a way that the Authority may take advantage of new and improved data communications equipment as it becomes available. Standard equipment and standard protocols shall be used, and no modifications to standard hardware or software shall be allowed.
+15.2 Equipment Overview
+The main equipment for each of the project&#8217;s two data centers is identified in Exhibit 15-1, whereas the main equipment for each control center is identified in Exhibit 15-2.
+The physical servers and their virtual servers/processors listed in Exhibit 15-1 are based on the provisional data center configuration depicted in Exhibit 3-1 and, as such, are subject to finalization based on the Contractor&#8217;s proposed design that shall meet the TDMS capacity, performance, security, and availability requirements. To this end, the Contractor&#8217;s design shall include all necessary hardware and software even though it may not be expressly identified in these Technical Specifications.
+Exhibit 15-1: List of Equipment for Each Data Center
+15.3 System Capacity
+15.3.1 General
+The Contractor shall supply sufficient TDMS data center and control center equipment to meet the Authority&#8217;s capacity requirements.
+The system capacity requirements include:
+1) The function and database capacity requirements associated with Clause 15.3.2.
+2) The processor and auxiliary memory capacity requirements associated with Clause 15.3.3 and 15.3.4.
+3) The communications channel capacity requirements associated with Clause 15.3.5.
+These capacity requirements shall be satisfied while meeting:
+1) The performance requirements of Clause 15.4.
+2) The availability requirements of Clause 14.8.
+Exhibit 15-2: List of Equipment for Each Control Center
+15.3.2 Function and Database Capacity
+15.3.3 Server Memory
+At least 50% of the main memory of each TDMS physical server or processing unit shall be unused (spare) and immediately available for the sole use of the Authority at the time of system commissioning. This shall also apply to the memory allocated to each server&#8217;s virtual machine. In addition, at the time of system commissioning, the main memory shall be expandable to two (2) times the installed memory capacity.
+15.3.4 Auxiliary Memory
+At least 50% of the auxiliary memory of each TDMS processing unit shall be unused (spare) and immediately available for the sole use of the Authority at the time of system commissioning. In addition, each auxiliary memory unit shall be expandable up to two (2) times its capacity. These requirements shall also apply to memory dedicated to backup and archiving data storage facilities including IS&amp;R data storage.
+Exhibit 15-6: Data Exchange with Other Systems
+15.3.5 Communications Channel Capacity
+15.4 System Performance
+15.4.1 System Activity Scenarios
+15.4.1.1 Base Scenario
+15.4.1.2 Steady-State Scenario
+15.4.1.3 High-Activity Scenario
+15.4.2 Resource Utilization
+15.4.2.1 Steady-State Utilization
+15.4.2.2 High-Activity State Utilization
+15.4.3 User Interface Response
+15.4.3.1 Display Request
+15.4.3.2 Alarm and Event Annunciation
+15.4.3.3 User Requests
+15.4.4 Resource Monitoring
+Exhibit 15-11: User Interface Response
+15.4.5 Configuration Management
+Exhibit 15-12: Configuration Management Performance
+Exhibit 15-13: Software Maintenance
+15.4.6 Software Maintenance</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
