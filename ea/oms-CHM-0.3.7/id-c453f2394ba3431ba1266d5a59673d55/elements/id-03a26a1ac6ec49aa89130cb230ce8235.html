@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>19. Information Storage and Retrieval</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>19. Information Storage and Retrieval</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">19. Information Storage and Retrieval
+To support TDMS users located in the project&#8217;s control rooms, Information Storage and Retrieval (IS&amp;R) shall be executed as a redundant function in the TDMS Production Environment (PDE) at each data center. IS&amp;R shall also execute as a non-redundant function in each data center&#8217;s Pre-Production Environment (PPE). Any authorized, designated TDMS user shall be able to access all IS&amp;R functions from any Contractor-provided TDMS workstation.
+An instance of IS&amp;R shall also be provided in the DMZE environment at each data center so that authorized, designated users on the Corporate WAN shall have synchronized, concurrent, but retrieve-only access to replicated IS&amp;R functionality. Providing IS&amp;R services to these non-TDMS users shall not affect the security of the TDMS from the perspective of the TDMS users. Thus, access by non-TDMS users shall be properly secured by Contractor-provided gateways consisting, for example, of routers and firewalls.
+Depending on the proposed TDMS design, each IS&amp;R instance shall execute on its own virtualized (Authority-preferred) or physical server.
+Within this context, IS&amp;R shall be capable of supporting a two or three-tier, i.e., client/server or client/application/server, architecture through the TCP/IP protocol. Open Database Connectivity (ODBC) is required with documented and demonstrable compatibility with Microsoft Access, Microsoft Excel, and other common front-end software. The DBMS shall be accessible by data management tools such as those based on Structured Query Language (SQL) and Dynamic Data
+Exchange (DDE). The Contractor shall provide the database client software and any additional Contractor-developed software that may be required to utilize the IS&amp;R capabilities.
+In general, any TDMS data value shall be available for capture, calculation, retention, and archiving by IS&amp;R. This includes telemetered data, data received via data exchange such as ICCP, real-time calculated data, manually entered data, data quality codes and supervisory control tags, power system snapshots, and data used and produced by the TDMS applications, including save cases.
+Data retrieval shall include on-line information query, display, trending, and reporting features along with an historical information playback function.
+Some of IS&amp;R&#8217;s specific functions shall include:
+1) Alarm and event capture, storage, and retrieval.
+2) SOE capture, storage, and retrieval.
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

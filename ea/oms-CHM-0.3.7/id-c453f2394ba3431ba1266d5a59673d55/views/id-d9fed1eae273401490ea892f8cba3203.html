@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>02-Implement</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>02-Implement</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-viewpoint-"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-viewpoint_" target="hint"></a>
+            <!-- Or if a model (i.e has Purpose method) -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+			   <img class="diagram" src="../images/id-d9fed1eae273401490ea892f8cba3203.png" alt="02-Implement" usemap="#id-d9fed1eae273401490ea892f8cba3203map"/>
+			   <map name="id-d9fed1eae273401490ea892f8cba3203map">
+				  		<area shape="rect" coords="562,10,671,65" href="../elements/id-45e8ade200644b82b977363d06fd23f2.html"  target="element">
+				  		<area shape="rect" coords="394,10,503,65" href="../elements/id-68835a3d2c004f028746ccb20d2cf2a2.html"  target="element">
+				  		<area shape="rect" coords="226,10,335,65" href="../elements/id-26af95f182a3404a8e4f7d6f256ac430.html"  target="element">
+				  		<area shape="rect" coords="664,106,761,161" href="../elements/id-485f94629421481aa37151492f572a08.html"  target="element">
+				  		<area shape="rect" coords="478,106,575,161" href="../elements/id-784a7451dbfa41899530cfa1422d72b8.html"  target="element">
+				  		<area shape="rect" coords="310,106,419,161" href="../elements/id-8bbd8c989295492ca8bd8320704aeeff.html"  target="element">
+				  		<area shape="rect" coords="154,106,251,161" href="../elements/id-b7560dcfdfcc4c37a35fe493cd3f9527.html"  target="element">
+				  		<area shape="rect" coords="664,214,761,269" href="../elements/id-d3a9ee8cee164d238e8d74481cbd85d2.html"  target="element">
+				  		<area shape="rect" coords="538,214,635,269" href="../elements/id-0b71a625cd1d47078ca85c7ea1cbc05b.html"  target="element">
+				  		<area shape="rect" coords="418,214,515,269" href="../elements/id-67129a3a9ed14f8ca8f40f31a6b074d6.html"  target="element">
+				  		<area shape="rect" coords="298,214,395,269" href="../elements/id-0abb835b074e47b899cbe4de9809f067.html"  target="element">
+				  		<area shape="rect" coords="142,214,263,269" href="../elements/id-6aded6d87efe496fad38eec1af6ad902.html"  target="element">
+				  		<area shape="rect" coords="814,328,923,395" href="../elements/id-d97ab4d372c847b3b0495ea473a6ee79.html"  target="element">
+				  				<area shape="rect" coords="646,334,743,389" href="../elements/id-84f451d89bc24f029c8b1e9616c133cf.html"  target="element">
+				  				<area shape="rect" coords="526,334,623,389" href="../elements/id-a7e3b8d298cf4f56b4bddd3f1be248dd.html"  target="element">
+				  				<area shape="rect" coords="406,334,503,389" href="../elements/id-2ef531587f2b49ca9e5c45419bf90b8a.html"  target="element">
+				  				<area shape="rect" coords="286,334,383,389" href="../elements/id-b43aaf6a851446079521395eac506aec.html"  target="element">
+				  				<area shape="rect" coords="154,334,263,389" href="../elements/id-3e5c79faebdb4e8692050f969b8893c8.html"  target="element">
+
+				  		<area shape="rect" coords="142,298,779,407" href="../elements/id-a484556bb0a14c30b092854f9f94d886.html"  target="element">
+				  		<area shape="rect" coords="10,334,118,389" href="../elements/id-bbb35692716f468ca9c4bed12287efc5.html"  target="element">
+
+			   </map>
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#elements" aria-controls="elements" role="tab" data-toggle="tab" class="i18n-elements"></a></li>
+						<li role="presentation"><a href="#relationships" aria-controls="relationships" role="tab" data-toggle="tab" class="i18n-relationships"></a></li>
+                    <!-- Model, Query Tab -->
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;&#3592;&#3634;&#3585;&#3585;&#3634;&#3619;&#3604;&#3635;&#3648;&#3609;&#3636;&#3609;&#3585;&#3634;&#3619;&#3650;&#3588;&#3619;&#3591;&#3585;&#3634;&#3619;&#3609;&#3637;&#3657;&#3592;&#3632;&#3652;&#3604;&#3657;&#3586;&#3657;&#3629;&#3585;&#3635;&#3627;&#3609;&#3604;&#3586;&#3629;&#3610;&#3648;&#3586;&#3605;&#3591;&#3634;&#3609;&#3607;&#3637;&#3656;&#3617;&#3637;&#3621;&#3633;&#3585;&#3625;&#3603;&#3632;&#3604;&#3633;&#3591;&#3649;&#3626;&#3604;&#3591;&#3651;&#3609;&#3616;&#3634;&#3614;&#3605;&#3656;&#3629;&#3652;&#3611;&#3609;&#3637;&#3657; &#3629;&#3608;&#3636;&#3610;&#3634;&#3618;&#3592;&#3634;&#3585;&#3595;&#3657;&#3634;&#3618;&#3652;&#3611;&#3586;&#3623;&#3634; &#3592;&#3634;&#3585;&#3604;&#3657;&#3634;&#3609;&#3621;&#3656;&#3634;&#3591;&#3586;&#3629;&#3591;&#3616;&#3634;&#3614; &#3627;&#3621;&#3633;&#3591;&#3592;&#3634;&#3585;&#3650;&#3588;&#3619;&#3591;&#3585;&#3634;&#3619;&#3652;&#3604;&#3657;&#3619;&#3633;&#3610;&#3629;&#3609;&#3640;&#3617;&#3633;&#3605;&#3636;&#3651;&#3627;&#3657;&#3604;&#3635;&#3648;&#3609;&#3636;&#3609;&#3585;&#3634;&#3619; &#3652;&#3604;&#3657;&#3612;&#3641;&#3657;&#3619;&#3633;&#3610;&#3592;&#3657;&#3634;&#3591;&#3607;&#3637;&#3656;&#3648;&#3611;&#3655;&#3609;&#3588;&#3641;&#3656;&#3626;&#3633;&#3597;&#3597;&#3634;&#3649;&#3621;&#3657;&#3623; &#3592;&#3632;&#3648;&#3619;&#3636;&#3656;&#3617;&#3604;&#3657;&#3623;&#3618;&#3585;&#3634;&#3619; &#3607;&#3610;&#3607;&#3623;&#3609;&#3588;&#3623;&#3634;&#3617;&#3605;&#3657;&#3629;&#3591;&#3585;&#3634;&#3619;&#3605;&#3634;&#3617;&#3586;&#3657;&#3629;&#3585;&#3635;&#3627;&#3609;&#3604;&#3649;&#3621;&#3632;&#3629;&#3629;&#3585;&#3649;&#3610;&#3610;&#3619;&#3632;&#3610;&#3610; (Requirement Review/Design) &#3627;&#3621;&#3633;&#3591;&#3592;&#3634;&#3585;&#3609;&#3633;&#3657;&#3609; &#3592;&#3632;&#3648;&#3611;&#3655;&#3609;&#3585;&#3634;&#3619;&#3614;&#3633;&#3602;&#3609;&#3634;&#3649;&#3621;&#3632;&#3605;&#3636;&#3604;&#3605;&#3633;&#3657;&#3591;&#3619;&#3632;&#3610;&#3610; OMS (Software Development and Installation) &#3605;&#3656;&#3629;&#3617;&#3634;&#3592;&#3632;&#3617;&#3637;&#3585;&#3634;&#3619;&#3604;&#3635;&#3648;&#3609;&#3636;&#3609;&#3585;&#3634;&#3619; &#3609;&#3635;&#3648;&#3586;&#3657;&#3634;&#3586;&#3657;&#3629;&#3617;&#3641;&#3621;&#3648;&#3619;&#3636;&#3656;&#3617;&#3605;&#3657;&#3609;&#3649;&#3621;&#3632;&#3648;&#3594;&#3639;&#3656;&#3629;&#3617;&#3650;&#3618;&#3591;&#3619;&#3632;&#3610;&#3610;&#3607;&#3637;&#3656;&#3648;&#3585;&#3637;&#3656;&#3618;&#3623;&#3586;&#3657;&#3629;&#3591; (Migration and Integration) &#3627;&#3621;&#3633;&#3591;&#3592;&#3634;&#3585;&#3609;&#3633;&#3657;&#3609;&#3592;&#3632;&#3648;&#3619;&#3636;&#3656;&#3617;&#3604;&#3635;&#3648;&#3609;&#3636;&#3609;&#3585;&#3634;&#3619;&#3629;&#3610;&#3619;&#3617;&#3649;&#3621;&#3632;&#3648;&#3619;&#3636;&#3656;&#3617;&#3605;&#3657;&#3609;&#3651;&#3594;&#3657;&#3591;&#3634;&#3609;
+
+&#3649;&#3605;&#3656;&#3621;&#3632;&#3586;&#3633;&#3657;&#3609;&#3605;&#3629;&#3609;&#3604;&#3635;&#3648;&#3609;&#3636;&#3609;&#3585;&#3634;&#3619; &#3652;&#3604;&#3657;&#3610;&#3633;&#3591;&#3648;&#3585;&#3636;&#3604;&#3612;&#3621;&#3621;&#3633;&#3614;&#3608;&#3660;&#3607;&#3637;&#3656;&#3649;&#3605;&#3585;&#3605;&#3656;&#3634;&#3591;&#3585;&#3633;&#3609;&#3652;&#3611; &#3648;&#3594;&#3656;&#3609; &#3586;&#3633;&#3657;&#3609;&#3605;&#3629;&#3609;&#3649;&#3619;&#3585;&#3592;&#3632;&#3652;&#3604;&#3657;&#3612;&#3621;&#3585;&#3634;&#3619;&#3629;&#3629;&#3585;&#3649;&#3610;&#3610; (Requirement Specification and Design) &#3605;&#3656;&#3629;&#3617;&#3634;&#3652;&#3604;&#3657;&#3585;&#3634;&#3619;&#3605;&#3636;&#3604;&#3605;&#3633;&#3657;&#3591;&#3619;&#3632;&#3610;&#3610; (Develop/Installation) &#3649;&#3621;&#3632;&#3652;&#3604;&#3657;&#3612;&#3621;&#3585;&#3634;&#3619;&#3609;&#3635;&#3648;&#3586;&#3657;&#3634;&#3586;&#3657;&#3629;&#3617;&#3641;&#3621;&#3648;&#3619;&#3636;&#3656;&#3617;&#3605;&#3657;&#3609;&#3649;&#3621;&#3632;&#3648;&#3594;&#3639;&#3656;&#3629;&#3617;&#3650;&#3618;&#3591;&#3619;&#3632;&#3610;&#3610; (Migration and Integration) &#3652;&#3604;&#3657;&#3612;&#3621;&#3585;&#3634;&#3619;&#3613;&#3638;&#3585;&#3629;&#3610;&#3619;&#3617; (On-the-job Training) &#3649;&#3621;&#3632;&#3652;&#3604;&#3657;&#3612;&#3621;&#3585;&#3634;&#3619;&#3648;&#3619;&#3636;&#3656;&#3617;&#3605;&#3657;&#3609;&#3651;&#3594;&#3657;&#3591;&#3634;&#3609;&#3592;&#3619;&#3636;&#3591; (Go Live) 
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="elements">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+									</tr>
+								</thead>
+								<tbody>
+											<tr>
+											    <td> <a href="../elements/id-bbb35692716f468ca9c4bed12287efc5.html" target="element"> OMS Project Approval </a> </td>
+											    <td> <a href="../elements/id-bbb35692716f468ca9c4bed12287efc5.html" target="element" class="i18n-elementtype-ImplementationEvent">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-a484556bb0a14c30b092854f9f94d886.html" target="element"> OMS Project Implementation </a> </td>
+											    <td> <a href="../elements/id-a484556bb0a14c30b092854f9f94d886.html" target="element" class="i18n-elementtype-WorkPackage">
+											    </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-3e5c79faebdb4e8692050f969b8893c8.html" target="element"> Requirement Review/ Design </a> </td>
+													    <td> <a href="../elements/id-3e5c79faebdb4e8692050f969b8893c8.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-b43aaf6a851446079521395eac506aec.html" target="element"> Software Develop/ Installation </a> </td>
+													    <td> <a href="../elements/id-b43aaf6a851446079521395eac506aec.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-2ef531587f2b49ca9e5c45419bf90b8a.html" target="element"> Software Migration/ Integration </a> </td>
+													    <td> <a href="../elements/id-2ef531587f2b49ca9e5c45419bf90b8a.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-a7e3b8d298cf4f56b4bddd3f1be248dd.html" target="element"> Training </a> </td>
+													    <td> <a href="../elements/id-a7e3b8d298cf4f56b4bddd3f1be248dd.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-84f451d89bc24f029c8b1e9616c133cf.html" target="element"> GO Live </a> </td>
+													    <td> <a href="../elements/id-84f451d89bc24f029c8b1e9616c133cf.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+											
+											<tr>
+											    <td> <a href="../elements/id-d97ab4d372c847b3b0495ea473a6ee79.html" target="element"> OMS Implement Complete </a> </td>
+											    <td> <a href="../elements/id-d97ab4d372c847b3b0495ea473a6ee79.html" target="element" class="i18n-elementtype-ImplementationEvent">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-6aded6d87efe496fad38eec1af6ad902.html" target="element"> Requirement Specification / Design </a> </td>
+											    <td> <a href="../elements/id-6aded6d87efe496fad38eec1af6ad902.html" target="element" class="i18n-elementtype-Deliverable">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-0abb835b074e47b899cbe4de9809f067.html" target="element"> Software Develop/ Instllation </a> </td>
+											    <td> <a href="../elements/id-0abb835b074e47b899cbe4de9809f067.html" target="element" class="i18n-elementtype-Deliverable">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-67129a3a9ed14f8ca8f40f31a6b074d6.html" target="element"> Software Migration/ Integration </a> </td>
+											    <td> <a href="../elements/id-67129a3a9ed14f8ca8f40f31a6b074d6.html" target="element" class="i18n-elementtype-Deliverable">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-0b71a625cd1d47078ca85c7ea1cbc05b.html" target="element"> On-the-job Training </a> </td>
+											    <td> <a href="../elements/id-0b71a625cd1d47078ca85c7ea1cbc05b.html" target="element" class="i18n-elementtype-Deliverable">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-d3a9ee8cee164d238e8d74481cbd85d2.html" target="element"> GO Live Report </a> </td>
+											    <td> <a href="../elements/id-d3a9ee8cee164d238e8d74481cbd85d2.html" target="element" class="i18n-elementtype-Deliverable">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-b7560dcfdfcc4c37a35fe493cd3f9527.html" target="element"> Current Status </a> </td>
+											    <td> <a href="../elements/id-b7560dcfdfcc4c37a35fe493cd3f9527.html" target="element" class="i18n-elementtype-Plateau">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-8bbd8c989295492ca8bd8320704aeeff.html" target="element"> Software develope and test </a> </td>
+											    <td> <a href="../elements/id-8bbd8c989295492ca8bd8320704aeeff.html" target="element" class="i18n-elementtype-Plateau">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-784a7451dbfa41899530cfa1422d72b8.html" target="element"> OMS Ready / Parallel Use </a> </td>
+											    <td> <a href="../elements/id-784a7451dbfa41899530cfa1422d72b8.html" target="element" class="i18n-elementtype-Plateau">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-485f94629421481aa37151492f572a08.html" target="element"> New OMS in Use </a> </td>
+											    <td> <a href="../elements/id-485f94629421481aa37151492f572a08.html" target="element" class="i18n-elementtype-Plateau">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-26af95f182a3404a8e4f7d6f256ac430.html" target="element"> Function Validation </a> </td>
+											    <td> <a href="../elements/id-26af95f182a3404a8e4f7d6f256ac430.html" target="element" class="i18n-elementtype-Gap">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-68835a3d2c004f028746ccb20d2cf2a2.html" target="element"> Data Validation </a> </td>
+											    <td> <a href="../elements/id-68835a3d2c004f028746ccb20d2cf2a2.html" target="element" class="i18n-elementtype-Gap">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-45e8ade200644b82b977363d06fd23f2.html" target="element">  Integration Validation </a> </td>
+											    <td> <a href="../elements/id-45e8ade200644b82b977363d06fd23f2.html" target="element" class="i18n-elementtype-Gap">
+											    </a> </td>
+											</tr>
+
+
+								</tbody>
+							</table>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="relationships">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+										<th class="i18n-source"></th>
+										<th class="i18n-target"></th>
+									</tr>
+								</thead>
+								<tbody>
+																	<tr>
+																		<td> <a href="../elements/id-6b1a01c3cb484c0483dd2aca973857ab.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-6b1a01c3cb484c0483dd2aca973857ab.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-bbb35692716f468ca9c4bed12287efc5.html" target="element"> OMS Project Approval </a> </td>
+																		<td> <a href="../elements/id-3e5c79faebdb4e8692050f969b8893c8.html" target="element"> Requirement Review/ Design </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-99a6bd7527b6447dab2b6f0f9d7497c7.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-99a6bd7527b6447dab2b6f0f9d7497c7.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-a484556bb0a14c30b092854f9f94d886.html" target="element"> OMS Project Implementation </a> </td>
+																		<td> <a href="../elements/id-3e5c79faebdb4e8692050f969b8893c8.html" target="element"> Requirement Review/ Design </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-d09437f5b9c7418f91d1cab19fca7f0b.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-d09437f5b9c7418f91d1cab19fca7f0b.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-a484556bb0a14c30b092854f9f94d886.html" target="element"> OMS Project Implementation </a> </td>
+																		<td> <a href="../elements/id-b43aaf6a851446079521395eac506aec.html" target="element"> Software Develop/ Installation </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-07705acab57543b596ec8f3e3b98c968.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-07705acab57543b596ec8f3e3b98c968.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-a484556bb0a14c30b092854f9f94d886.html" target="element"> OMS Project Implementation </a> </td>
+																		<td> <a href="../elements/id-2ef531587f2b49ca9e5c45419bf90b8a.html" target="element"> Software Migration/ Integration </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-2420a4d5cab642a49652c35f3e7f4b6a.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-2420a4d5cab642a49652c35f3e7f4b6a.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-a484556bb0a14c30b092854f9f94d886.html" target="element"> OMS Project Implementation </a> </td>
+																		<td> <a href="../elements/id-a7e3b8d298cf4f56b4bddd3f1be248dd.html" target="element"> Training </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-4d37435271064a2db2e1e62e4b1ef658.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-4d37435271064a2db2e1e62e4b1ef658.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-a484556bb0a14c30b092854f9f94d886.html" target="element"> OMS Project Implementation </a> </td>
+																		<td> <a href="../elements/id-84f451d89bc24f029c8b1e9616c133cf.html" target="element"> GO Live </a> </td>
+																	</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-a2bf6ff700ad467b92765a7dcbad1bbb.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-a2bf6ff700ad467b92765a7dcbad1bbb.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-3e5c79faebdb4e8692050f969b8893c8.html" target="element"> Requirement Review/ Design </a> </td>
+																				<td> <a href="../elements/id-b43aaf6a851446079521395eac506aec.html" target="element"> Software Develop/ Installation </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-0603fea0e2034729bdf49ab3d06cebd8.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-0603fea0e2034729bdf49ab3d06cebd8.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-3e5c79faebdb4e8692050f969b8893c8.html" target="element"> Requirement Review/ Design </a> </td>
+																				<td> <a href="../elements/id-6aded6d87efe496fad38eec1af6ad902.html" target="element"> Requirement Specification / Design </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-dd543be9ba3847219e0ed39716c4d04f.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-dd543be9ba3847219e0ed39716c4d04f.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-b43aaf6a851446079521395eac506aec.html" target="element"> Software Develop/ Installation </a> </td>
+																				<td> <a href="../elements/id-2ef531587f2b49ca9e5c45419bf90b8a.html" target="element"> Software Migration/ Integration </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-f0ef4cb5f05541cf9c9c71c3ebb5d1ed.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-f0ef4cb5f05541cf9c9c71c3ebb5d1ed.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-b43aaf6a851446079521395eac506aec.html" target="element"> Software Develop/ Installation </a> </td>
+																				<td> <a href="../elements/id-0abb835b074e47b899cbe4de9809f067.html" target="element"> Software Develop/ Instllation </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-e4112f73c4b94315919fee6b0e389240.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-e4112f73c4b94315919fee6b0e389240.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-2ef531587f2b49ca9e5c45419bf90b8a.html" target="element"> Software Migration/ Integration </a> </td>
+																				<td> <a href="../elements/id-a7e3b8d298cf4f56b4bddd3f1be248dd.html" target="element"> Training </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-9fec34600f2f45e1961314972357f1a8.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-9fec34600f2f45e1961314972357f1a8.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-2ef531587f2b49ca9e5c45419bf90b8a.html" target="element"> Software Migration/ Integration </a> </td>
+																				<td> <a href="../elements/id-67129a3a9ed14f8ca8f40f31a6b074d6.html" target="element"> Software Migration/ Integration </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-db12c06146974943984424bd68d2cb9c.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-db12c06146974943984424bd68d2cb9c.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-a7e3b8d298cf4f56b4bddd3f1be248dd.html" target="element"> Training </a> </td>
+																				<td> <a href="../elements/id-84f451d89bc24f029c8b1e9616c133cf.html" target="element"> GO Live </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-0b2fa3e172ef444e8b46b22d81016ad1.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-0b2fa3e172ef444e8b46b22d81016ad1.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-a7e3b8d298cf4f56b4bddd3f1be248dd.html" target="element"> Training </a> </td>
+																				<td> <a href="../elements/id-0b71a625cd1d47078ca85c7ea1cbc05b.html" target="element"> On-the-job Training </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-4e06166451024598a9a5b14e02ba00a7.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-4e06166451024598a9a5b14e02ba00a7.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-84f451d89bc24f029c8b1e9616c133cf.html" target="element"> GO Live </a> </td>
+																				<td> <a href="../elements/id-d97ab4d372c847b3b0495ea473a6ee79.html" target="element"> OMS Implement Complete </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-63f696a666854a188b4ea08ad08991f1.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-63f696a666854a188b4ea08ad08991f1.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-84f451d89bc24f029c8b1e9616c133cf.html" target="element"> GO Live </a> </td>
+																				<td> <a href="../elements/id-d3a9ee8cee164d238e8d74481cbd85d2.html" target="element"> GO Live Report </a> </td>
+																			</tr>
+
+											
+																	<tr>
+																		<td> <a href="../elements/id-e6a41db370774c85b325dca0c3ad4e4e.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-e6a41db370774c85b325dca0c3ad4e4e.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6aded6d87efe496fad38eec1af6ad902.html" target="element"> Requirement Specification / Design </a> </td>
+																		<td> <a href="../elements/id-8bbd8c989295492ca8bd8320704aeeff.html" target="element"> Software develope and test </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-c30aa5864dca4660bc5aeaaae2badba0.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-c30aa5864dca4660bc5aeaaae2badba0.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-0abb835b074e47b899cbe4de9809f067.html" target="element"> Software Develop/ Instllation </a> </td>
+																		<td> <a href="../elements/id-8bbd8c989295492ca8bd8320704aeeff.html" target="element"> Software develope and test </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-55e6c9674c8b4f43ae08bd2faf741aea.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-55e6c9674c8b4f43ae08bd2faf741aea.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-67129a3a9ed14f8ca8f40f31a6b074d6.html" target="element"> Software Migration/ Integration </a> </td>
+																		<td> <a href="../elements/id-784a7451dbfa41899530cfa1422d72b8.html" target="element"> OMS Ready / Parallel Use </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-de3a2640319143c2854b7e0f5b59ad81.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-de3a2640319143c2854b7e0f5b59ad81.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-0b71a625cd1d47078ca85c7ea1cbc05b.html" target="element"> On-the-job Training </a> </td>
+																		<td> <a href="../elements/id-784a7451dbfa41899530cfa1422d72b8.html" target="element"> OMS Ready / Parallel Use </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-3ab683a8ff664f9592310b53ea35f714.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-3ab683a8ff664f9592310b53ea35f714.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-0b71a625cd1d47078ca85c7ea1cbc05b.html" target="element"> On-the-job Training </a> </td>
+																		<td> <a href="../elements/id-485f94629421481aa37151492f572a08.html" target="element"> New OMS in Use </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-74d138650e014e60a0614028f4540395.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-74d138650e014e60a0614028f4540395.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-d3a9ee8cee164d238e8d74481cbd85d2.html" target="element"> GO Live Report </a> </td>
+																		<td> <a href="../elements/id-485f94629421481aa37151492f572a08.html" target="element"> New OMS in Use </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-1f947aa4aabb4d71a2a1db649713f518.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-1f947aa4aabb4d71a2a1db649713f518.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-26af95f182a3404a8e4f7d6f256ac430.html" target="element"> Function Validation </a> </td>
+																		<td> <a href="../elements/id-b7560dcfdfcc4c37a35fe493cd3f9527.html" target="element"> Current Status </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-1fd2097b1c784437b845ade4093767bc.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-1fd2097b1c784437b845ade4093767bc.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-26af95f182a3404a8e4f7d6f256ac430.html" target="element"> Function Validation </a> </td>
+																		<td> <a href="../elements/id-8bbd8c989295492ca8bd8320704aeeff.html" target="element"> Software develope and test </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-edb39376d7cc4b169d98ef29639a51b0.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-edb39376d7cc4b169d98ef29639a51b0.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-68835a3d2c004f028746ccb20d2cf2a2.html" target="element"> Data Validation </a> </td>
+																		<td> <a href="../elements/id-8bbd8c989295492ca8bd8320704aeeff.html" target="element"> Software develope and test </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-b079ac23c1114e73bf09011b8120bde3.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-b079ac23c1114e73bf09011b8120bde3.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-68835a3d2c004f028746ccb20d2cf2a2.html" target="element"> Data Validation </a> </td>
+																		<td> <a href="../elements/id-784a7451dbfa41899530cfa1422d72b8.html" target="element"> OMS Ready / Parallel Use </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-1d0bf587f3c441c984320ec2e4dbc1ed.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-1d0bf587f3c441c984320ec2e4dbc1ed.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-45e8ade200644b82b977363d06fd23f2.html" target="element">  Integration Validation </a> </td>
+																		<td> <a href="../elements/id-784a7451dbfa41899530cfa1422d72b8.html" target="element"> OMS Ready / Parallel Use </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-4959116b2b3a492ea3132faf43b16bd5.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-4959116b2b3a492ea3132faf43b16bd5.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-45e8ade200644b82b977363d06fd23f2.html" target="element">  Integration Validation </a> </td>
+																		<td> <a href="../elements/id-485f94629421481aa37151492f572a08.html" target="element"> New OMS in Use </a> </td>
+																	</tr>
+
+
+								</tbody>
+							</table>
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

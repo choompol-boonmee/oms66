@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>11. Critical Infrastructure Protection</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>11. Critical Infrastructure Protection</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">11. Critical Infrastructure Protection
+Due to the critical nature of TDMS operations and its networking with other systems, protection against cyber security threats is of major concern to the Authority. While recognizing that such protection is a combination of user security procedures and system security technologies, the TDMS shall incorporate all necessary security system technologies to minimize the possibility of successful security attacks and provide mechanisms for identifying, coping with, and recovering from successful security attacks. The Contractor shall also recommend user security procedures that will make the most effective use of the system security technologies.
+
+Within this context, the TDMS shall be designed using a risk-based approach and applying the principle of defense-in-depth to provide a robust and resilient system, i.e., multiple layers of security controls shall be placed throughout the TDMS such that, in the event a security control fails or a vulnerability is exploited, there is a secondary or redundant control that will prevent, delay, or mitigate the exploit in addition to alerting relevant personnel so that mitigation steps can be taken.
+
+All security functions must be implemented in a non-interfering manner such that authorized and legitimate use of the TDMS is not hampered, i.e., the ability to perform the required TDMS functions shall not be impeded by the security features. This shall be demonstrated during factory and site acceptance tests during which the TDMS software shall also be audited to ensure that the cyber security measures described in the following sub-clauses and elsewhere in the Technical Specifications are satisfied.
+
+The Contractor shall also provide hardware and software tools by which the Authority can manage the security measures incorporated into the TDMS design. Such tools shall have been described in detail in the Contractor&#8217;s proposal.
+
+11.1 Applicability of Cyber Security Standards
+The TDMS is considered a Critical Cyber Asset. Therefore, notwithstanding any additional cyber security requirements specified herein (also refer to Clause 7), it is preferred that the Contractor&#8217;s processes and supplied systems conform, as a minimum, to all applicable requirements of the Critical Infrastructure Protection (CIP) standards promulgated by the North American Reliability Council (NERC), including:
+
+1) CIP-002, Critical Cyber Assets
+2) CIP-003, Security Management Controls
+3) CIP-004, Personnel &amp; Training
+4) CIP-005, Electronic Security
+5) CIP-006, Physical Security
+6) CIP-007, Systems Security Management
+7) CIP-008, Incident Reporting and Response Planning
+8) CIP-009, Recovery Planning
+9) CIP-010, Configuration Change Management
+10) CIP-011, Information Protection
+11) CIP-014, Physical Security
+
+As applicable, the Contractor&#8217;s security measures shall also comply with other cyber security standards and guidelines such as:
+1) ISO/IEC 27002/27019, Information technology &#8211; Security techniques &#8211; Code of practice for information security management.
+2) NIST Interagency Report (NISTIR) 7628, Guidelines for Smart Grid Cyber Security.
+3) IEC 62433, Industrial communication networks &#8211; Network and system security.
+4) IEC 62351 series of Cyber Security standards as applicable to the TDMS communication protocols that include:
+a) Secure ICCP based on IEC 60870-6-TASE.2 to provide a secure exchange of information between the TDMS and the EGAT SCADA/EMS for example.
+b) IEEE 1815-2012 (secure DNP 3.0) to provide secure exchanges of telemetry and control between the TDMS and its FDIs.
+
+c) IEC 61968 and IEC 61970 to provide XML exchanges of data in the form of Common Information Model (CIM) profiles between the TDMS and other systems.
+d) IEC 61850 to provide (as an option for possible future use) secure exchanges of telemetry and control between the TDMS and its FDIs.
+5) BDEW white paper, Requirements for Secure Control and Telecommunication Systems.
+6) ISO/IEC 17799 - Information Technology - Security Techniques.
+Which security standards are incorporated in the TDMS, and where and how they are incorporated, shall have been described in detail in the Contractor&#8217;s proposal.
+
+11.2 Security Awareness Program
+The Contractor shall establish, maintain, and document a security awareness program to ensure personnel having authorized cyber or authorized unescorted physical access receive on-going reinforcement in sound security practices. The program shall cover the policies, access controls, and procedures developed for Critical Cyber Assets and include, as a minimum, the following required items appropriate to personnel roles and responsibilities:
+
+11.3 Firewall Protection
+The Contractor shall design TDMS security zones by using appropriate firewall devices. Firewalls shall limit access at the packet and application levels. Each firewall shall support the following features:
+1) Authentication &#8211; The firewall shall require authentication of users and software applications as they exchange data through the firewall.
+2) Access Control &#8211; The firewall shall provide access control through Access Control Lists (ACLs) and through limiting the number of open ports to only those required for TDMS operation. Changes to ACLs shall only be implemented via authorized and authenticated means and shall be logged.
+
+11.4 Removal of Unused Services
+All applications, utilities, system services, scripts, configuration files, databases, user accounts, and all other software not required for operation of the TDMS shall be removed prior to commissioning. The items to be removed shall specifically include, but not be limited to:
+1) Games.
+2) Device drivers for devices not delivered.
+3) Servers and clients for unused Internet services.
+4) All software compilers except for the PPE.
+5) Software compilers for languages that are not used in the TDMS.
+6) All unused protocol suites.
+7) Unused administrative utilities, diagnostics, network management, and system management functions.
+8) Backups of files, databases, and programs used during system development.
+9) Databases, configuration files, and other files used for development and testing.
+10) Programs and scripts used for development and testing including sample programs and scripts.
+11) All text as may be in the system for Contractor development purposes. For example, system displays, databases, and logs shall not contain such text.
+12) Help systems not directly supporting TDMS applications.
+
+11.5 Software Updates and Virus Scan
+11.6 Detection of Unauthorized Modifications to Software
+11.7 Anti-Virus and Malware Detection Software
+11.8 Security Monitoring and Reporting
+11.9 Generic and Default Accounts
+11.10 Account Management
+11.10.1 Role-Based Access Control
+11.10.2 User Account Password/Authentication Management
+11.10.3 Account Audit and Logging
+11.11 Appropriate Use Banner
+11.12 Secure Maintenance Access
+11.13 Authorization Process for Contractor Personnel
+11.14 Session Management
+11.15 Hardware Configuration Protection
+11.16 Security Patch Management
+11.17 Web-Based Interfaces
+11.18 Recovery Plans for Critical Assets
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>12. System Interoperability</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>12. System Interoperability</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">12. System Interoperability
+The objective of the TDMS capability requirements from an interoperability perspective is to enable the TDMS to automate data exchanges with other Authority IT/OT systems and applications that exist or will exist in the foreseeable future. These include systems such as the Geographic Information System (GIS), Meter Data Management System (MDMS), Outage Management System (OMS), and Asset Management System (AMS), and the application suite comprising DigSILENT. The MDMS represents an aggregation system associated with one or more Advanced Metering Infrastructure (AMI) head-end systems.
+Thus, to the extent possible, the TDMS shall be delivered in a form that is system integration ready from the perspective of the Authority&#8217;s Smart Grid initiatives and Enterprise Application Integration (EAI) plans. Within this context, the TDMS as a minimum shall support the system interoperability requirements as specified herein.
+12.1 Background
+Exhibit 12-1 identifies the systems and application (collectively referred to as the in-scope actors) that, in addition to the TDMS, are associated with an anticipated future state of the Authority&#8217;s OT/IT environment. These in-scope actors are required to exchange data with the TDMS.
+
+They are used to identify a conceptual architecture, i.e., an architecture vision, which focuses on TDMS integration with Authority existing and/or future enterprise systems. The resulting architecture, identified in Exhibit 12-2, is based on a logical representation of the systems to be integrated, but does not necessarily align with the physical systems that are used or will be used to host the applications. Exhibit 12-2 also identifies other systems or actors that may need to be integrated at some time in the future but, for now, are considered out-of-scope.
+To facilitate events and data exchanges with other systems, the TDMS shall be required to provide the interfaces/endpoints as illustrated in Exhibit 12-3. The Contractor shall work closely with the Authority to identify the data comprising these interfaces/endpoints in detail during project implementation.
+12.2 Interoperability Gateway
+
+The TDMS shall have an interoperability gateway to enable implementation of manageable, secure, and auditable two-way communications channels over the networks between the TDMS and other Authority OT/IT systems and applications.
+For example, as in Exhibit 12-3, the gateway in the form of middleware shall provide in effect a demilitarized zone between the TDMS and an Enterprise Service Bus (ESB). The ESB will be provided by the Authority.
+Thus, the interoperability gateway shall:
+1) Allow the TDMS to provide or consume services to or from external systems and applications
+2) Allow the TDMS to provide or consume data via Message Queues, e.g., Java Message Service (JMS).
+3) Allow staging tables to be created by which the TDMS can write or read data either consumed or provided by external systems and/or applications.
+Exhibit 12-1: System Integration In-Scope Actors
+Exhibit 12-2: SG Logical Architecture Vision (TDMS Interoperability Perspective)
+12.3 Role of Common Information Exchange Semantic Model
+One of the key elements of the interoperability approach is to establish an Authority, common information exchange, Semantic Model where various applicable industry standards are leveraged as reference models.
+To generate the data model and subsequent implementation artifacts and meet the requirements for semantic consistency across systems and data stores that interact with the TDMS, the data modeling process requires the Contractor to describe information exchanges at data element level in a semantically unambiguous way. Such descriptions shall be provided in CIM-like UML diagrams or in spreadsheet formats. A common semantic understanding is essential as a vehicle for streamlining integration activities.
+
+Exhibit 12-3: SCADA / TDMS Integration Scope and Responsibility Diagram
+12.4 TDMS Interface/Data Exchange Specifications
+Exhibit 12-4: TDMS Data Exchanges
+Exhibit 12-5: TDMS Interface/Endpoint Matrix
+Exhibit 12-6: TDMS Data Exchange Diagram
+	</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Existing Facility</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Existing Facility</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">Existing Facility
+
+Authority HV/MV power system operations currently utilize a SCADA/EMS/DMS at the Bangkok
+control center known as the System Management Center (SMC), a SCADA/DMS at each of twelve (12)
+other control centers, known as Area Distribution Dispatching Centers (ADDCs), and another
+SCADA/DMS at one (1) control center known as the Phuket Distribution Dispatching Center (PDDC).
+The SCADA/DMS at the SMC along with those at five (5) ADDCs were commissioned in 2004 as part
+of the Authority&#8217;s Distribution Dispatching Center Project 1st Stage (DDC1). Subsequently, in 2008, the
+SCADA/DMS at the SMC was upgraded to a SCADA/EMS/DMS system by adding a suite of HV
+functions. The locations of these control centers are identified as follows:
+
+1) SMC at Authority Headquarters (Bangkok)
+2) ADDC-C1 in Central Region Area 1 (Ayutthaya)
+3) ADDC-C2 in Central Region Area 2 (Chon Buri)
+4) ADDC-C3 in Central Region Area 3 (Nakhon Pathom)
+5) ADDC-S1 in Southern Region Area 1 (Phetcha Buri)
+6) ADDC-N3 in Northern Region Area 3 (Lop Buri)
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

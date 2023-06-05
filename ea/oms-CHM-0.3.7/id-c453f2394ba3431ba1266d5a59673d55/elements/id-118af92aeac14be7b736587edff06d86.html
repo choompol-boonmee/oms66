@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>9. Data Architecture</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>9. Data Architecture</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">9. Data Architecture
+
+The database foundation shall include both the schemas (logical descriptions of the databases) and the instances (run time databases) of the real-time, study, simulation, historical, and other data structures (as may apply). It shall also encompass all aspects of database management across the distributed architecture of the TDMS.
+
+9.1 General Design Concepts
+The data architecture of the TDMS shall include facilities for storage of data defining the state of the power system and the parameters that determine operation of the TDMS. Within this context, as a minimum, the following design concepts shall be applied:
+1) High speed access.
+2) Secure access from the perspective of preventing:
+a) Unauthorized access (read-only, read-write, create-delete).
+
+9.2 Data Access
+A library of access routines shall be the preferred means for application programs to interact with the database. This way, application programs (and programmers) only need to concern themselves with the callable Application Interface (API) of these routines. Each application shall interact with the database through the event library. These access routines shall serve as generic APIs for database access thereby eliminating proprietary database function calls at the application level.
+Data access shall be supported by the following general capabilities:
+1) Interfaces to the database shall be by logical names specified by the Authority. It shall not be necessary for users or applications to have knowledge of the logical or physical structure of the database. TDMS users, including technical staff maintaining the applications or database, shall not be exposed to internal identifiers of database items such as indexes into tables.
+
+9.3 Data Naming
+Data items in the TDMS database shall be identified using a consistent naming scheme. Data items representing power system device attributes, including telemetered data and supervisory control outputs, shall accommodate the Authority&#8217;s existing naming conventions. The existing naming convention, for example, allows for SCADA point names of up to 30 alphanumeric characters and for point descriptions of up to 50 alphanumeric characters. During project implementation, the Authority will provide naming convention details in the form of an applicable template.
+
+9.4 Database Construction and Maintenance
+Database construction capabilities shall include definition of the initial database structure, population of the structure with its initial contents, and revision of the structure when necessary. Database maintenance shall support the subsequent addition of new database contents and the modification of
+existing contents. The tools used by the Contractor, such as the TDMS Editor tool (refer to Clause 3.1.3), to construct and maintain the database shall be delivered with the TDMS. The system database shall be documented in a complete database manual that shall be available on-line and that explains the interrelationship of all associated database structures. The database manual shall provide both visual samples and text descriptions of the entry format and purpose of all fields in all database structures.
+
+9.5 Adjustable Parameters
+All parameters in the TDMS shall be defined in the database and shall be adjustable by designated personnel. Adjustments made to parameters shall become effective without having to recompile programs or regenerate all or portions of the database. All time periods contained in these Technical Specifications shall be considered initial values for planning purposes, but all software parameters must be adjustable by Authority personnel.
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
