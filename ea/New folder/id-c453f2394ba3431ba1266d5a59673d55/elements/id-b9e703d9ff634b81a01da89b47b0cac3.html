@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Required System Architecture</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Required System Architecture</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">3.2 Required System Architecture
+Compared to the existing DDC1/DDC2 architecture, which consists of individual SCADA/EMS/DMS
+or SCADA/DMS systems at 14 Authority control centers, the required architecture for DDIP is
+designed to provide a new SCADA/EMS/DMS capable of serving as a centralized common resource
+for these same 14 control centers. On this basis, to access the functional capabilities and features of the
+new SCADA/EMS/DMS, referred to hereafter as the Transmission and Distribution Management
+System (TDMS), the dispatchers at all control centers will be provided with remote client workstations.
+This avoids the need for individual SCADA/EMS/DMS or SCADA/DMS systems at the control
+centers.
+In Exhibit 3-1, SMC personnel notwithstanding, the SCADA/DMS at each control center receives,
+processes, stores, and displays data for use by its own dispatcher and data engineering personnel. This
+is based on system data communications with its own set of Field Device Interfaces (FDIs), i.e., the
+FDIs located at the system&#8217;s substation and feeder sites.
+In contrast, as shown in &#3612;&#3636;&#3604;&#3614;&#3621;&#3634;&#3604;! &#3652;&#3617;&#3656;&#3614;&#3610;&#3649;&#3627;&#3621;&#3656;&#3591;&#3585;&#3634;&#3619;&#3629;&#3657;&#3634;&#3591;&#3629;&#3636;&#3591;, the new architecture leads to a situation in which the
+TDMS servers at two data centers communicate with the substation and feeder-located FDIs, where the
+two data centers represent ICT facilities that are to be built as part of a separate Authority project. By
+having TDMS servers at both data centers, the DDIP goal to provide disaster recovery capabilities are
+met, i.e., if one data center&#8217;s TDMS functions are no longer available, dispatchers can continue working
+by accessing the same functions executing on the TDMS servers at the alternative (backup) data center.
+In addition, with all control centers having access to the same SCADA, EMS, and DMS functions, one
+or more control centers can serve as backup for any control centers that become non-functional. For
+example, if one control center goes down, dispatchers at other control centers can be assigned its Areas
+of Responsibility (AORs). Note that critical TDMS functions at any data center will also be backed up,
+i.e., these functions will be supported by redundant servers so that, if a server goes down, failover to the
+backup server will take place.
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

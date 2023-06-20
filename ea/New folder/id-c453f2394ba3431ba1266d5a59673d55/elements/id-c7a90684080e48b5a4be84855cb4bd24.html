@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Operational Context</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Operational Context</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">Currently, dispatcher responsibilities at the SMC and ADDCs are such that:
+1) Dispatchers, at ADDCs provided as part of DDC1, monitor and control the HV and MV power
+system networks within their specific areas of responsibility. However, as they only have
+access to their local SCADA/DMS functions, they need to closely coordinate their HV
+operations with SMC dispatchers, who have access to EMS functions as well as SCADA/DMS
+functions.
+2) Dispatchers, at ADDCs provided as part of DDC2, also monitor and control the HV and MV
+power system networks within their specific areas of responsibility. In this case, they have
+remote access to the EMS functions at the SMC as well, so that they can execute functions
+such as the HV power flow and contingency analysis functions independently of the SMC
+dispatchers.
+3) SMC dispatchers can monitor MV networks and, if necessary, send controls to operate MV
+network devices. They can also execute the SMC system&#8217;s DMS functions. Their primary
+concern, however, lies with monitoring and controlling the HV network and, in this regard,
+make use of the SMC system&#8217;s EMS functions. Other related activities include:
+
+a) Monitoring, coordinating, and supervising ADDC dispatcher control of the HV power
+system network.
+b) Maintaining HV and MV load forecasts for each area as well as for the overall service
+territory.
+c) In response to EGAT requests to shed load, deciding how much load should be shed in
+each area and then directing ADDC dispatchers to shed and ultimately restore load
+accordingly.
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

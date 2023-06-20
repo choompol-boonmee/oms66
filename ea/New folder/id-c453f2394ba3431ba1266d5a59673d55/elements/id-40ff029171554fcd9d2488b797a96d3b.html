@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>21. Documentation</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>21. Documentation</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">21. Documentation
+Documentation shall be provided for all equipment and functions provided by the Contractor as part of DDIP. Unless otherwise specified in these Technical Specifications, all documentation shall be in
+English and/or Thai. The documentation shall describe the TDMS, including all of its hardware, software, and interfaces and shall cover functionality, testing, installation, cutover, system startup, operations, and maintenance.
+21.1 Definitions
+For the purposes of this project, the following definitions shall be used:
+1) Documents or Documentation &#8211; Textural and graphical information describing the TDMS or equipment, systems, and other items peripheral to the TDMS, whether embodied in hardcopy or electronic form such as common word processor files. Documents may also be referred to as manuals, guides, books, drawings, transmittals, and specifications. Documents are further divided into standard, OEM, and custom documents.
+2) Standard documents &#8211; Documents produced by the Contractor that are applicable to all users of the equipment and software, including the Authority. It is expected that the Contractor will use a formal revision control scheme to maintain its standard documents. Documents not maintained under such a scheme shall be considered custom documents.
+3) OEM documents &#8211; OEM (original equipment manufacturer) documents are standard documents produced by subcontractors. Documents produced by subcontractors for customized elements of the TDMS shall be deemed custom documents.
+4) Custom documents &#8211; All documents not categorized as standard or OEM documents including the Contractor&#8217;s standard documents that are modified to meet the Authority&#8217;s specific requirements.
+5) Project Documents &#8211; Project documents are those documents produced for the conduct of the project, but which do not directly describe the TDMS. Examples of project documents include transmittal cover pages, correspondence between the Authority, the Contractor, and other parties, electronic mail messages, records of telephone conversations, meeting minutes, action item lists, test plans and procedures, and transmittal and document lists.
+The requirements for project documents are addressed in the following clauses:
+1) Documentation plan &#8211; Clause 24.5.1
+2) Project progress report &#8211; Clause 24.5.2
+3) Project meeting, agenda, and minutes &#8211; Clause 24.5.3
+4) Detailed implementation schedule &#8211; Clause 24.5.5
+5) Project security documentation &#8211; Clause 24.6.1
+6) Variance records &#8211; Clause 22.5.1
+7) Factory test documents &#8211; Clause 22.4 and Clause 22.9
+8) Site test documents &#8211; Clause 22.4 and Clause 22.10
+9) Availability test documents &#8211; Clause 22.4 and Clause 22.11
+10) Training documents &#8211; Clause 23.2.
+The remainder of this clause addresses the requirements for documents other than project documents.
+21.2 Document Format
+Documents shall be delivered in two phases:
+1) Approval documents submitted for Authority review and approval
+2) Final documents.
+In addition to accessing Contractor documents posted on the Project Tracking System (PTS) as described in Clause 24.4, the Authority prefers that documents be delivered as softcopy on magnetic media or by electronic transfer (electronic mail or ftp, for example). Final documents, as well as being posted on the PTS, shall be delivered as hardcopy and on CD-ROM.
+System users with appropriate permissions shall be able to access system on-line documentation as well, i.e., documentation such as functional design documents, user guides, maintenance manuals, on-line help, and operating procedures, via a simple procedure involving a point and click operation.
+Documents shall be supplied in a format that can be edited by the Authority. Handwritten texts are not acceptable. The Authority's standard word processing software is Microsoft Office. The Contractor is encouraged to use this software for documents. All documents should be searchable. If the Contractor uses other word processing or document production software, copies of the software suitable for installation on personal computers using a current WINDOWS Operating System shall be provided.
+Drawings and diagrams may be embedded in the document files or may be supplied as separate files. The Authority's standard drawing software is AutoCAD. If the Contractor uses other drawing software, copies of the software suitable for installation on a personal computer using a current WINDOWS Operating System shall be provided.
+Documents delivered as hardcopy shall be printed on both sides of A4 paper and bound in three-ring binders. Divider pages with appropriately labeled tabs shall separate chapters. The spine of each volume shall be labeled with the document title and volume number, so it may be easily identified when shelved.
+
+Documents delivered on softcopy media shall be formatted for printing on A4 paper.
+Each document shall include a title or information page showing the document number, title, and revision record. The document number shall be a unique number assigned in accordance with the Contractor's standard practice. The title page shall include a space into which the Authority may enter a document number assigned from the Authority's document management system. The revision record
+
+shall describe each new version of the document since its original production. The revision record shall include:
+1) The date of the change
+2) A brief description of the change
+3) An indication that the change has been reviewed and approved in accordance with the Contractor's quality assurance procedures
+4) The version or release of the hardware or software to which the document applies.
+Each document shall include a table of contents. If a document is divided into several physical volumes, each volume shall contain the complete table of contents of the whole document.
+
+Documents that describe generic or typical TDMS elements will not be acceptable to the Authority unless the specific material applicable to this project is easily distinguishable from the material not applicable to this project. Custom documents shall not contain any material that is not pertinent to the project.
+Where the phrase "on-line documentation" is used in these Technical Specifications, it shall be interpreted to mean the ability to view the document from any TDMS workstation. The Contractor shall provide all software necessary to provide this capability. For non-OEM documentation (documentation produced by the Contractor), the Contractor shall also provide the capability to edit and annotate the document.
+21.3 Document Review and Approval
+All standard and OEM documents provided pursuant to this contract shall be subject to review by the Authority. Custom documents pursuant to this contract shall be subject to approval by the Authority.
+21.3.1 Document Review
+The Authority's review of documents shall be limited to determining that:
+1) The documents are legible and have been produced in accordance with the documentation standards of the Contractor or subcontractors.
+2) All hardware and software is in full conformance with the contract.
+3) All software has been produced in accordance with the coding and display standards of the Contractor or subcontractors.
+4) The documents clearly and accurately describe the features and options of the hardware and software that pertain to the TDMS.
+
+The Authority will review documents within ten (10) working days of their submittal. Unusual circumstances notwithstanding, if the Authority does not transmit comments on the documents within the review period, the Contractor may assume that the document is fully acceptable to the Authority.
+If the Authority transmits comments on any documents, the Contractor shall respond to the comments within ten (10) working days of receipt of the comments. If the comments address OEM documents, the Contractor shall act as an advocate of the Authority to initiate and facilitate resolution of the comments with the subcontractor.
+21.3.2 Document Approval
+All custom and project documents shall be subject to a formal approval process. Factory and site test plans and procedures (Clauses 22.4.1 and 22.4.2) shall also be subject to approval. The review for approval performed by the Authority will be like the document review process but will more closely examine the functionality and design aspects of the hardware or software. Clarity and completeness of the presentation of the material within the documents will be a key element of the review for approval.
+The approval process shall proceed as follows:
+1) The Contractor shall transmit documents subject to the approval process to the Authority. The transmittal cover shall identify the document as requiring approval and shall identify the date by which the Authority should respond. The Contractor shall allow at least ten (10) working days for the Authority's reading of the document. This time may be adjusted by mutual agreement to accommodate the other activities of the Authority and the Contractor. Requests by either party to change the time shall be made within two (2) working days of receipt of the documents by the Authority.
+
+2) The Authority shall return comments to the Contractor within the agreed time. The transmittal cover for the comments shall clearly indicate that the document is either:
+a) Approved &#8211; If approved, the Contractor may proceed with the work covered by the document. No further approval action is required.
+b) Approved with Comments &#8211; If approved with comments, the Contractor may proceed with the work covered by the document and the comments.
+c) Not Approved &#8211; If not approved, the Contractor may proceed with the work covered by the document and the comments only at the Contractor&#8217;s own risk. No schedule or cost relief will be granted for any work undertaken prior to approval of the appropriate documents.
+3) If desired by any party, the comments may be discussed to clarify the Authority's intent.
+4) The Contractor shall then revise and resubmit the documents within five (5) working days after receipt of the comments from the Authority. This time may be adjusted by mutual agreement to accommodate the other activities of the Authority and the Contractor. Requests
+
+by either party to change the time shall be made within two (2) working days of receipt of the comments by the Contractor.
+5) All changes made to documents to reflect approval comments shall be clearly highlighted and the revision record shall be updated to reflect the changes. The Authority prefers the use of the change-tracking feature of the word processor used to produce the documents.
+6) The review and comment process shall be repeated until the document is accepted. After the document is accepted, the Contractor shall deliver the required number of final copies free of highlighting due to the tracking of changes.
+21.3.3 Scope of Reviews and Approvals
+The acceptance or approval of any documents by the Authority shall not relieve the Contractor of the responsibility to meet all requirements of the contract including responsibility for correction of the documents. The Contractor shall have no claim for additional costs or extensions of time because of delays due to document revisions that may be necessary for ensuring compliance with the contract.
+All deliverable documentation shall be revised by the Contractor to reflect the delivered TDMS. Any modifications to the TDMS resulting from the factory and site acceptance tests shall be incorporated in this documentation. All previously submitted documents modified because of engineering changes, contract changes, or errors or omissions shall be resubmitted for review or approval as appropriate.
+21.4 Deliverable Documentation
+Exhibit 21-1 below lists the minimum documentation and quantities to be delivered. It also identifies when they are expected to be first submitted for review and approval.
+
+Exhibit 21-1: Deliverable Documentation
+21.5 System Overview Document
+The Contractor shall provide a System Overview Document for the TDMS that introduces the reader to the purpose and function of the system.
+This document shall provide a basic description of the system and its functions, the relationship between the functions including the data flow between them, and the local and wide area communications networks used by the TDMS.
+
+21.6 Documentation Standards
+The Contractor shall provide a document defining the standards used to create and maintain all documentation supplied by the Contractor. The standards shall define:
+1) The word processing or document production software used to create the documents
+2) Templates for each document type
+3) Definitions of the contents for each document type
+4) Drawing standards to be followed
+5) The approval process to be followed for document releases.
+
+21.7 Hardware Documentation
+The following documentation shall be provided for all hardware provided pursuant to this contract:
+1) List of deliverable hardware
+2) Equipment configuration diagram
+3) Network configuration diagram
+4) Interconnection list
+5) Site installation drawings and procedures.
+
+The other hardware documentation to be supplied shall be commensurate with the hardware maintenance philosophy to be employed by the Authority, which is to maintain all hardware after system acceptance using its own staff as much as possible (also refer to Clause 24.9 of these Technical Specifications).
+Equipment manuals shall be provided for all hardware to be maintained by the Contractor or a third-party maintenance contractor. This documentation shall be that which is normally supplied by the OEM as long as it includes the information described in Clause 21.7.6.
+Equipment manuals and hardware maintenance manuals shall be provided for all hardware to be maintained by the Authority.
+
+21.7.1 List of Deliverable Hardware
+The list shall itemize each hardware item and include equipment configuration information. The configuration information shall be sufficient so that the Authority can procure an identical item from the manufacturer. The list shall also include network names and addresses (or these shall be included in the network configuration diagram) and shall include a space for the Authority to enter equipment identification for their own purpose.
+
+21.7.2 Equipment Configuration Diagram
+The equipment configuration diagram shall depict the logical interconnection of all Contractor-supplied equipment and its connection to the Authority-supplied equipment. The configuration diagram shall use the same terminology as the list of deliverable hardware so that the correspondence between the two can be readily determined.
+21.7.3 Network Configuration Diagram
+This document shall show the design of the local area networks supplied by the Contractor as well as the associated local and wide area networks supplied by the Authority. Both logical and physical depictions shall be provided for the network supplied by the Contractor. Only a logical depiction is required for the network supplied by the Authority.
+21.7.4 Interconnection List
+The physical interconnections among the TDMS components, other than those shown on the network configuration diagram, shall be depicted. Each cable shall be identified, along with its terminations.
+21.7.5 Site Installation Drawings and Procedures
+The site drawings shall depict the physical arrangement of the TDMS components. References to the appropriate equipment manuals are acceptable. The drawings and procedures shall include:
+
+1) Equipment physical drawings showing dimensions, cabinet internal arrangements, and the size and weight of each enclosure
+2) Unpacking, moving, handling, and other installation details
+3) The location of external connections including types and sizes of connectors
+4) Input power and grounding requirements
+5) Environmental requirements.
+21.7.6 Equipment Manuals
+Equipment manuals shall contain the following:
+1) A description of the function of the equipment
+
+2) Installation, setup, and operating instructions
+3) A block diagram showing the logical and physical interconnections among the major components
+4) Expansion and upgrade capabilities and instructions
+5) Preventive maintenance instructions
+6) Detailed functional, logical, electrical, and mechanical characteristics of all interfaces to the device, including protocol descriptions
+7) Troubleshooting and repair guides including a description of and instructions for the diagnostics furnished.
+21.7.7 Hardware Maintenance Manual
+The hardware maintenance manual shall describe the preventive maintenance and restorative procedures required to maintain the equipment in good operating condition. The information in the manuals shall include:
+
+1) Operating details &#8211; This information shall include a detailed description of how the equipment operates and a block diagram illustrating each major assembly in the equipment. Descriptions of external data transfers with other equipment, including data patterns, security check-codes, and transfer sequences shall be included. The operational sequence of major assemblies within the equipment shall be described and illustrated by functional block diagrams and timing diagrams. Detailed logic diagrams shall also be provided as necessary for troubleshooting analysis and field repair actions.
+2) Preventive maintenance instructions &#8211; These instructions shall include all applicable visual examinations, hardware testing and diagnostic routines, and the adjustments necessary for periodic preventive maintenance of the equipment. Instructions on how to load and use any test and diagnostic program and any special or standard test equipment shall be an integral part of these procedures.
+3) Corrective maintenance instructions &#8211; These instructions shall include procedures for locating malfunctions down to the field-replaceable module level. These guides shall include adequate details for quickly and efficiently locating the source of an equipment malfunction. The instructions shall also include explanations for the adjustment or replacement of all items, including printed circuit cards. Schematic diagrams of electrical, mechanical, and electronic circuits, parts-location illustrations, photographs, cable routing diagrams, and sectional views giving details of mechanical assemblies shall be provided as necessary to replace faulty equipment. For mechanical items requiring field repair, information on tolerances, clearances, wear limits, and maximum bolt-down torque shall be supplied. Information on the loading and use of special off-line diagnostic programs, tools, and test equipment, as well as any cautions or warnings that must be observed to protect personnel and equipment shall be included.
+
+4) Parts information &#8211; This information shall include the identification of each replaceable or field-repairable module. All other parts shall also be identified. The identification shall be at a level of detail sufficient for procuring any repairable or replaceable part. Cross-references between the Contractor's part numbers and the manufacturer's part numbers shall be provided.
+21.8 Software Documentation
+The following overarching documents shall be provided:
+1) List of Deliverable Software.
+2) Software Development Standards.
+The Contractor or subcontractors shall also provide documents for all software that has been produced for the TDMS. This shall include:
+1) Database definition documents.
+2) Interface requirements documents.
+
+3) Software functional description documents.
+4) Source code version control and revision control documentation.
+In addition, the following documents shall be provided for all software produced specifically for this contract:
+1) Software requirements matrix.
+2) Detailed design documents.
+21.8.1 List of Deliverable Software
+The list shall itemize each software item and include version and license information. In this respect, the distribution media for each software item shall be identified.
+
+The Authority does not intend to change the source code and so does not require direct access to the source code for this purpose. However, to ensure access by the Authority (or a third-party engaged by the Authority in the future), i.e., in the event the Contractor is unable to provide necessary source code maintenance or upgrade, the source code shall be placed in an ESCROW account.
+21.8.2 Software Development Standards
+The Contractor shall document the development standards used to develop the TDMS software. The Authority reserves the right to reject software that does not conform to the development standards. The standards shall define:
+1) Program design disciplines
+2) Resources under which the program must operate
+3) Basic services
+
+21.8.3 Database Definition
+The database definition shall identify the characteristics of all TDMS databases. It shall include, but shall not be limited, to the following:
+1) The name or identification of the database
+2) A description of the intended use of the database. If the database is specific to a single application, the application shall be identified.
+
+21.8.4 Software Functional Description
+The intent of the software functional descriptions shall be to describe the functions to be performed by each software module from the standpoint of a user. Software functional descriptions are also referred to as user guides. The functional operation of the TDMS shall be clearly described so that it can be understood without understanding the detailed operation of each software module.
+
+21.8.5 Installation Images and Source Code
+All software shall be delivered in three forms:
+1) As a fully operational system installed on auxiliary memory
+2) As distribution images that are suitable for installation on the system
+3) Buildable source code including libraries, compilers, and linkers for building software.
+
+21.8.6 Software Requirements Matrix
+The Contractor shall provide a list of all software requirements, cross-referenced to show where each requirement is discussed in the relevant software document.
+
+21.8.7 Detailed Design Document
+The detailed design documents are intended as a second level of detail to the software functional descriptions. In general, a detailed design document shall relate to a single software functional description. It is expected that, for customized software, the Contractor will first deliver a software functional description for approval by the Authority. After approval, the Contractor will produce a detailed design document for approval. Production of the software will then proceed after approval of the detailed design document.
+21.9 Interface Requirements Document
+The Interface Requirements Document shall describe in detail the interfaces between the TDMS and Authority-provided systems and networks. Both the Contractor and Authority will use the Interface Requirements Document as the definition of the interface between the TDMS and all other systems, so that each system can be designed or modified to meet its requirements. The Authority will provide all required information to the Contractor so that it can prepare the document accordingly.
+As a minimum, the Interface Requirements Document shall cover the following aspects:
+1) Description of the hardware interface.
+2) Description of the communication protocols, including the lower level network protocols, the upper level session, presentation, and application protocols, and the options and parameters selected.
+3) Description of the database access methods and capabilities, including specific displays, commands, and access and authorization requirements.
+4) Description of relevant database models, structures, and contents for these databases.
+5) Data exchange requirements including timing, priority, volume, and security requirements. A specific list of data to be exchanged during factory and site testing shall also be included.
+6) Description of the performance requirements.
+7) Exception (for example, error) processing.
+
+8) Failover/backup processing.
+9) Alarm conditions.
+10) Archiving requirements.
+21.10 System Maintenance Manual
+The System Maintenance Manual shall describe all user procedures necessary to build and maintain the software system of the TDMS. It shall include complete instructions on performing a system generation from sources for all processors. It shall provide information on optimizing system performance. It shall describe the hierarchy of disk directories used by the TDMS software system, and the location of all categories of files: including executable programs, displays, databases, sources, build files, etc. It shall also describe the procedures to configure the TDMS computer system.
+
+21.11 Cyber Security Documentation
+The Contractor shall produce documentation of all network configurations, including network access control rules implemented in &#8220;firewalls&#8221; used to secure the electronic perimeter(s) surrounding the component systems of the TDMS. The documentation shall include a description of all systems that interact electronically with the TDMS and describe the purpose and justification for all interconnections, including whether they are required for core operations, business information needs, or maintenance. Additionally, this document shall include the network address, protocol service, and direction of initiation for each documented access
+
+21.12 Display Style Guide
+The Contractor shall furnish a Display Style Guide that describes the discretionary aspects of display design and implementation. This guide shall take into consideration the Authority&#8217;s existing EMS/DMS display conventions and standards. The resulting Display Style Guide shall be used by the Contractor to develop all displays supplied with the TDMS. The display conventions and standards shall promote a consistent look and feel across all TDMS displays.
+21.13 Operating Manuals
+The Contractor shall submit, for review and approval, operating manuals for all TDMS functions. The operating instructions associated with all features shall be incorporated into these manuals. Context sensitivity shall be used to go directly to the appropriate place in the manual.
+
+21.13.1 Dispatcher&#8217;s Manual
+The Dispatcher&#8217;s Manual shall be custom documentation written specifically for the TDMS as finally delivered and accepted by the Authority. All snapshots used as illustrations shall be of genuine displays on the actual TDMS.
+The Dispatcher&#8217;s Manual shall be written for use by the Authority&#8217;s Dispatchers. It shall be organized in a logical sequence and shall fully describe the user interface relevant to all operational functions of the TDMS. Each step of a multi-step procedure shall be described, with a clear indication of which menu items are selected to proceed to the next step.
+
+21.14 As-Built Documents and Drawings
+The Contractor shall submit as-built documents including applicable drawings for review and approval. All deliverable documents and drawings shall be revised by the Contractor to reflect the as-built TDMS. Any errors in or modifications to the system resulting from the factory and site acceptance tests shall be incorporated in this documentation. Within this same context, all previously submitted documents that are changed because of engineering changes, contract changes, or errors or omissions shall be resubmitted for review and approval.
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
