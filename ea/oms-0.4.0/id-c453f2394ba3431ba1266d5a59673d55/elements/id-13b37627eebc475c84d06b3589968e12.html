@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>22. Quality Assurance and Testing</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>22. Quality Assurance and Testing</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">22. Quality Assurance and Testing
+To ensure that the Contractor produces a well-engineered and contractually compliant TDMS, a quality assurance program shall be followed and both structured and unstructured tests shall be performed. This program shall include the early integration tests in cooperation with the suppliers of the FDCU and radio equipment, i.e., as part of the required Joint Development program (refer to Part A of these Technical Specifications), the ability of the TDMS to interoperate successfully with the FDCU and radio equipment shall be demonstrated. This is to minimize potential problems during on-site point-to-point testing, problems such as those associated with communications, point mapping, and the protocol profiles implemented by the project&#8217;s different FDCU suppliers.
+22.1 Quality Assurance Program
+To meet the above intent, the Contractor&#8217;s proposal shall have included as a part of the QA program:
+1) A list of Contractor and OEM manufacturing and assembly sites to be visited.
+2) A schedule of visits to these sites by Authority representatives.
+3) A budget allowing up to five (5) Authority personnel to visit these facilities as a single group during one trip of seven (7) days organized and paid for entirely by the Contractor.
+4) A breakdown of the cost with respect to international and local airfares (if any), ground transportation, accommodation, and meals.
+
+22.2 Inspection
+The Authority shall be allowed access to the Contractor&#8217;s facilities during system design, manufacturing, and testing and to any facility where hardware or software is being produced. The Contractor shall provide office facilities, equipment, and documentation necessary to complete all inspections and to verify that the TDMS is being fabricated and maintained in accordance with the Technical Specifications.
+22.3 Test Responsibilities
+In writing and prior to the start of factory testing, the Authority and Contractor shall each designate a test coordinator. To ensure tests are conducted expeditiously, in accordance with Authority requirements, the coordinators shall have the authority to make binding commitments. This shall include, for example, the approval of test results and the scheduling of variance corrections.
+
+22.4 Test Documents
+Test plans, procedures, and records shall be provided by the Contractor for all tests (excluding inspections and software demonstrations pursuant to Clause 22.2) to ensure that each test is comprehensive and verifies the proper performance of the TDMS elements under test. During the development of test plans and test procedures, emphasis shall be placed on testing each functional requirement, checking error conditions, and documenting the simulation techniques that may be used.
+
+22.4.1 Test Plans
+The test plans shall describe the overall test process, including the responsibilities of individuals and the documentation of the test results. The following shall be included in the test plans:
+1) The schedule for the test.
+2) The responsibilities of Contractor and Authority personnel, including record-keeping assignments.
+3) Any forms to be completed as part of the tests and the instructions for completing the forms.
+4) Procedures for monitoring, correcting, and testing variances.
+
+5) Procedures for controlling and documenting all changes made to the hardware and software after the start of testing.
+6) Block diagrams of the hardware test configuration, including the field device interfaces provided by others, external communication channels, and any test or simulation hardware.
+Test plans shall be provided for the Factory Acceptance Test, Site Acceptance Test, and System Availability Test.
+22.4.2 Test Procedures
+The test procedures shall describe the methods and processes to be followed in testing the TDMS. The test procedures shall be modularized, such that individual functions of the TDMS can be independently tested and so that the testing proceeds in a logical manner. This clause uses the term segment to refer to a higher-level part of a test procedure and the term step to refer to the most detailed level of test instruction.
+
+The test procedures shall include the following items:
+1) The name of the function to be tested.
+2) References to the functional, design, user, and any other documents describing the function.
+3) A list of test segments to be performed and a description of the purpose of each test segment.
+4) The setup and conditions for each segment, including descriptions of the test equipment and data to be supplied by the Contractor and by the Authority.
+
+22.4.3 Test Records
+Complete records of all tests result shall be maintained. The records shall be keyed to the test procedures. The following items shall be included in the test records:
+1) Reference to the appropriate test procedure.
+2) Date of the test.
+3) Description of any test conditions, input data, or user actions differing from those described in the test procedure.
+4) Test results for each test segment including a passed/failed indication and a record that each step was performed. All information recorded during the test such as measurements, calculations, or times shall be included in the results.
+
+22.5 Variance Recording and Resolution
+The Contractor shall establish a process to record and track variances. This process shall be initiated at a time to be determined by the Contractor, but no later than the start of pre-FAT, and shall continue through the completion of the warranty. Both the Contractor and the Authority may initiate variances at any time. Variances may be used to record system deficiencies, including:
+
+1) Documentation deficiencies.
+2) Functional deficiencies.
+3) Performance deficiencies.
+4) Procedural deficiencies (as when deviations from contractually required QA procedures are observed).
+5) Test deficiencies (as when the system cannot satisfactorily complete a test procedure due to a problem with the test).
+The variance process shall produce reports of all variance information and shall produce reports of subsets of the variances based on searches of the variance parameters singly and in combination. Variance reports shall be available to the Authority always. The Contractor shall periodically distribute a variance summary that lists for each variance the report number, a brief overview of the variance, its category, and its priority.
+22.5.1 Variance Records
+The record of each variance shall include the following information:
+
+1) The time and date of the initial discovery of the variance.
+2) A variance number &#8211; a unique, sequential number assigned when the variance is entered into the tracking system.
+3) An identification of the person submitting the variance and the names of any other witnesses or knowledgeable Authority or Contractor staff.
+4) An identification of the TDMS component, such as a hardware item or software function, against which the variance is being written.
+5) An identification of the test plan or procedure, if applicable. The stage or step of the plan or procedure shall be identified.
+6) An overview of the variance suitable for use in keyword searches.
+7) A detailed description of the variance.
+8) A variance category:
+
+a) Open (recorded but not scheduled for further action)
+b) Assigned (scheduled for further action)
+c) Pending (the variance has been resolved but not tested)
+d) Closed (the Authority has accepted the resolution)
+e) Disputed (Contractor believes the reported problem is acceptable)
+f) Deferred (the variance will be corrected at a later project phase)
+9) The date of assignment into each category.
+
+10) A variance priority:
+a) Critical &#8211; To be used only if the TDMS is in commercial use, this priority identifies a problem that prevents the use of a TDMS feature that is essential to the Authority's operation of the power system.
+b) High &#8211; Denotes the failure of the TDMS to perform a required feature in a manner that significantly reduces the utility of the TDMS or feature or which delays further testing of the TDMS or feature.
+c) Normal &#8211; Denotes the failure of the TDMS to perform a required feature in a manner that reduces the utility of the TDMS or feature. Normal priority variances shall not delay any testing.
+
+22.5.2 Schedule for Variance Correction
+The Contractor and the Authority shall meet as necessary to review the variance list. Each new variance opened since the previous meeting shall be scheduled for correction at the meeting. The Authority and Contractor shall follow these guidelines for scheduling corrections:
+22.5.3 Variance Resolution
+A variance shall be deemed resolved only upon written acceptance of the correction by the Authority. Prior to submitting the corrected variance for acceptance by the Authority, the Contractor shall take all reasonable steps to verify that the correction has resolved the variance, and the Contractor shall update the variance record to reflect the corrective action taken. The Contractor shall then schedule any testing to be performed in conjunction with the Authority
+
+22.6 Test Schedule
+The sequence of tests to be performed and their scheduling with respect to other activities are presented in Clause 24.7, Testing, Shipment, and Commissioning.
+22.6.1 Test Initiation
+The following conditions must be satisfied before starting any test (exclusive of inspections or demonstrations pursuant to Clause 22.2):
+
+22.6.2 Test Completion
+A test shall be deemed to be successfully completed only when:
+1) All variances have been resolved to the satisfaction of the Authority.
+2) All test records have been transmitted to the Authority.
+3) The Authority acknowledges, in writing, successful completion of the test.
+22.6.3 Test Suspension
+
+22.7 Modifications to the TDMS during Testing
+
+22.8 Preliminary Factory Testing
+
+22.9 Factory Test
+Factory tests shall include:
+1) Equipment test
+2) Functional test
+3) Performance test
+4) Stability test
+5) Unstructured test.
+22.9.1 Equipment Test
+
+22.9.2 Functional Test
+22.9.3 Performance Test
+The performance test shall verify that the specified performance requirements are met. Simulation shall be provided by the Contractor, where necessary, to create the conditions for the specified performance scenarios (refer to Clause15). The simulations shall be tested first to verify that the desired activity is being simulated. Execution of the performance tests shall be automated as much as possible so that test runs can be reproduced.
+22.9.4 Stability Test
+A 100-hour continuous run of the system shall be performed after successful completion of the functional and performance tests. The stability test will be considered successful if no critical function is lost, no major hardware failure occurs, no failover occurs, and no restarts occur within the test period.
+
+Major hardware failure is defined for this test as the loss of hardware such as a processor, disk, user workstation, etc. Non-repetitive mechanical failures of printers, loggers, pushbuttons, etc., are not considered major failures. The test shall not purposely cause any hardware or software failure, i.e., failover and restart testing is not a goal of this test.
+During this test, the system shall be exercised (with simulated inputs, events, and conditions) in a manner that approximates an operational environment. The Authority will help simulate unstructured user activity during this test. Otherwise, the Contractor shall take full responsibility for setting up and conducting the test.
+22.9.5 Unstructured Test
+The test schedule shall allow time throughout the functional testing for unstructured testing by the Authority. Time for unstructured testing shall be reserved at the rate of at least two hours of unstructured testing for each eight hours of structured testing, but no less than four days total. This time will be used by the Authority to perform additional tests, the need for which may be recovered during the formal testing, and to investigate any potential problems detected. The unstructured tests will be
+
+performed during the functional and performance test period and during the stability test at the discretion of the Authority.
+The Contractor shall assist the Authority in this test as required by the Authority; this assistance will be primarily in the form of helping to set up the test, explaining the best procedures to run the test, and explaining all unexpected results.
+22.9.6 Cyber Security Audit
+The cyber security audit shall verify that the requirements of Clauses 7, 11, and 24.6 and others have been satisfied. Within this context, as a minimum, the following cyber security test, verification, and review activities shall be conducted:
+
+22.10 Site Acceptance Test
+The Site Acceptance Test (SAT) includes the installation test, the functional and performance test, and the cyber security audit that will be conducted at the Authority&#8217;s site after Contractor shipment, installation, and pre-commissioning of the TDMS. In this respect, SAT shall constitute formal TDMS commissioning by the Contractor in the presence of Authority personnel as witnesses.
+
+22.10.1 Installation Test
+The installation tests shall be conducted by the Contractor and shall include:
+1) A repetition of the equipment test of Clause 22.9.1.
+2) Loading of the TDMS software and starting the system. At the option of the Authority, all software shall be recompiled from the source or distribution media.
+3) In cooperation with the Authority, ensuring attachment of the TDMS to communications facilities for all data sources and other systems that interface with the TDMS.
+4) Initialization and preliminary tuning of application software as needed.
+
+22.10.2 Site Functional and Performance Test
+The site functional and performance test (&#8220;site test&#8221;) shall consist of a subset of the functional and performance tests of Clause 22.9.1, Equipment Test, Clause 22.9.2, Functional Test, and Clause 22.9.3, Performance Test.
+
+The tests to be performed shall be proposed by the Contractor and approved by the Authority. These tests shall be extended as necessary to test functions simulated during FAT, such as communications with all field device interfaces and all other systems that interface with the TDMS. The extended tests shall be performed in accordance with a test procedure prepared by the Contractor and approved by the Authority. Unstructured tests shall also be employed, as necessary, to verify overall operation and responsiveness of the TDMS. In effect, the Contractor shall be responsible for demonstrating that the system can meet the Authority&#8217;s specified capacity and performance requirements under actual field conditions.
+22.10.3 Site Cyber Security Audit
+The cyber security audit at site shall repeat the audit performed during factory testing (refer to Clause 22.9.6).
+22.11 Availability Test
+This test shall demonstrate TDMS and device availability in accordance with the criteria specified in Clause 14.8, System Availability.
+
+22.11.1 Test Activity
+The test activity shall consist of normal TDMS operations with the system in commercial use. The Authority may modify the TDMS databases, displays, reports, and application software during the availability test. Such modifications will be described to the Contractor at least 48 hours in advance of implementation to allow assessment of impact on the availability test, except where such changes are necessary to maintain control of the power system.
+22.11.2 Test Definitions
+The definitions of the time periods used in determining the duration of the test and the success of the test shall be as follows:
+
+22.11.3 Duration and Criteria for Passing
+The minimum duration of the availability test shall be 1,500 consecutive hours of test time.
+To establish that all failures have been satisfactorily repaired prior to the end of the availability test, no downtime, intermittent (hold time) failures, or more than one un-commanded failover shall have occurred within 200 hours of the test's conclusion. The test shall be extended, if necessary, to satisfy this requirement.
+
+After 1,500 consecutive hours of test time have elapsed and contingent on the conditions of the above paragraph, system availability shall be computed using the following formula:
+System_availability = [(Test_time &#8211; Down_time)/Test_time] x 100%
+If the system availability requirements presented in Clause 14.8, System Availability, have not been met, the test shall continue until the specified availability is achieved. Alternatively, at the Authority's discretion, the test may be restarted.
+
+
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

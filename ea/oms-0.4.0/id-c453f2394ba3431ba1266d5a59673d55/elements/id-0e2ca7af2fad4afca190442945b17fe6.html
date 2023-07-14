@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>16. User Interface/ Visualization</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>16. User Interface/ Visualization</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">16. User Interface/Visualization
+Users of the TDMS will interface with the TDMS at workstations. Interface functionality, however, shall be limited by the user&#8217;s logon privileges. For example, users connected to the Corporate WAN and authorized to access the Web-server in the TDMS DMZ shall only be allowed to view and access the data on the TDMS displays that correspond to the specifics of their authorization. This shall be possible by using their workstation&#8217;s commercially available browser, e.g., Internet Explorer. In addition, the Contractor&#8217;s proposal shall have described how the browsers on their mobile phones or tablets could be used to securely view and access the data on the displays made available via the DMZ&#8217;s Web-server.
+The user interface features of the TDMS shall include those that can be provided by video display walls and multifunction printers. In this respect, Authority existing as well as Contractor-provided video display walls shall be utilized. The existing video display walls to be utilized (along with their controllers) are those that were provided for the DDC2 project (i.e., one video wall display at each of 7 DDC2 control centers) and the video display wall more recently installed at the SMC control center. These video display walls are BARCO products, and all of them use the LINUX Operating System. Further details will be provided as needed during project implementation.
+16.1 Visualization Design
+The visualization functionality supplied with the TDMS shall employ the latest full-graphics technology with Situational Awareness tools. Displays shall be built only once, after which they shall be viewed and used for TDMS interaction from any workstation.
+Situational Awareness tools shall have advanced features such as Drag and Drop, Advanced Alarming, 3D visualizations, world maps, contouring, Picture-in-Picture (PIP), and use of widgets and other objects. These features shall be used to enhance operations and significantly enhance situational awareness in the control room. There shall be no limitation in number of user-based desktops. These shall include but shall not be limited to fully customizable dashboards including data widgets that relay vital information to Dispatchers and other users of the TDMS such as operations managers. Some of the Out-of-the-box objects and widgets shall include Meters, Dials, Gauges, LEDs, Knobs, Buttons, Pie and Bar Charts, and Line/Plot Graphs.
+16.2 User Interface Guidelines
+16.2.1 User-System Interaction Guidelines
+The user procedures for interacting with the TDMS shall be simple, fast, and unambiguous, and shall be &#8220;fail-safe&#8221; to guard against inadvertent user errors. In this respect, the following design guidelines shall be followed:
+1) Single-step procedures (i.e., initiation of functions by clicking a pushbutton or a display symbol that is always shown in the appropriate application window) are required, whenever feasible, for frequently used functions and for critical functions.
+2) Common and frequently employed actions shall be initiated from toolbars. One or more toolbars, specific to an application or function that is currently active, shall be shown in each window.
+3) The use of pop-up dialog menus which overlay portions of one or more windows shall be kept to a minimum.
+4) Multi-level menus shall be used only for the presentation of hierarchies of options and shall have the minimal number of levels needed.
+16.2.2 Information Presentation Guidelines
+The following design guidelines shall be followed for information presentation:
+1) Power system information shall be organized and presented to the user in a manner that allows the user to be immediately aware of any condition requiring urgent attention, to quickly grasp the most significant aspects of a situation, and to have fast access to related data for further investigation.
+2) Application programs shall not merely present the results of their calculations, but shall present in highlighted form, the most significant results.
+16.2.3 Look-and-Feel
+16.3 Visualization Features
+16.3.1 Thai Alphabet
+16.3.2 Common Features
+16.3.3 Windows Management
+16.3.4 Display System Requirements
+16.3.5 Display Selection
+16.3.6 List Displays
+16.3.7 Scaling and Translation
+16.3.8 Schematic and Geographic Display Interactions
+16.3.9 Supervisory Control Initiation
+16.3.10 Data Entry
+16.3.11 User Action Recording
+16.3.12 Interlocks
+16.3.13 Memos
+16.3.14 Field Crew Location
+16.3.15 Jumpers, Grounds, and Cuts
+16.3.16 Equipment Information
+16.3.17 Inactivity Timeout
+16.3.18 User Guidance
+16.3.19 User Help
+16.3.20 TDMS Access Security
+16.3.20.1 User Login
+16.3.20.2 Access Security Management
+16.3.21 Areas of Responsibility
+16.3.22 Advanced Visualization Features
+16.3.23 Data Access Spreadsheet
+16.4 Alarm and Event Processing
+16.4.1 Alarm Class and Alarm Presentation
+16.4.2 Alarm Messages
+Alarm messages shall be a single line of text describing the alarm that has occurred. Each alarm message shall include:
+1) The time and date of the alarm (with alarms from previous days clearly identified)
+2) A complete identification of the database point
+16.4.3 Alarm Window
+16.4.4 Alarm Acknowledgement
+The user shall be able to acknowledge alarms associated with any application or database condition on any display that presents the alarm. Alarms shall also be alarmed programmatically. When an alarm is acknowledged, the unacknowledged condition shall be reset in the database and all display attributes for the point shall be reset to their acknowledged state.
+16.4.5 Alarm Deletion
+The user shall be able to delete alarms associated with any application or database condition on any display that presents the alarm. Alarms shall also be deleted programmatically. When an alarm is deleted, the unacknowledged condition shall be reset in the database and the alarm message(s) shall be removed from the alarm summary display. However, all other alarm attributes shall remain as they were before the delete action and the alarm conditions shall continue to be shown on displays other than the alarm summary.
+16.4.6 Alarm Inhibit and Enable
+Alarm annunciation for any point shall be inhibited and enabled by user command. Alarm inhibit and enable operations shall be reported as events. When inhibited, alarms for the point shall be detected and processed and the database attributes for the alarm condition shall be set. However, the point in alarm shall be marked as unacknowledged and any alarms detected shall not be annunciated or presented on
+the alarm summary. Alarm conditions and messages existing at the time of an inhibit action shall remain as they were before the action. Alarms detected after an inhibit action shall not be annunciated when alarming is enabled.
+16.4.7 Alarm Audible Silencing and Suppression
+Audible alarm annunciation shall be silenced, suppressed, and enabled by user command. Alarm audible silencing and enable operations shall be reported as events.
+Audible alarm silencing shall stop ongoing audible annunciation at the workstation issuing the silence command. New alarms shall again sound the audible alarm.
+Audible alarm suppression silences audible annunciation and suppresses audible annunciation for new alarms at the workstation issuing the silence command until audible annunciation is enabled. An indication of the suppression shall be presented as a common feature on the workstation so that the user is clearly informed of the condition.
+16.4.8 Enhanced Alarm Management
+Additional features for alarm management shall be provided. Desirable features of the enhanced alarm management function include:
+1) Minimization of nuisance alarm messages (for example, repetitive alarms for the same alarm condition).
+2) Combining of related alarm messages.
+16.5 Display Hardcopy
+The TDMS shall print a copy of a window on any workstation when commanded by a user. The output shall be directed to a printer of the user&#8217;s choice. Color displays shall be translated to gray scale for black and white printers using a mapping table (or other, similar technique) that can be changed by the user. The display hardcopy function shall not inhibit the workstation from normal operation after a copy is requested, even when multiple users issue simultaneous hardcopy requests.
+16.6 User Interface Development
+Tools to define and maintain displays shall be provided with the TDMS. The display &#8220;editor&#8221; shall support the definition of all of the displays in the TDMS and shall be the same tool used by the Contractor to develop displays provided by the Contractor.
+16.6.1 Display Style
+All displays provided by the Contractor shall have a consistent layout and consistent rules of operation (also known as a consistent &#8220;look and feel&#8221;). Each display shall be consistent in its use of graphics, commands, menus, colors, poke procedures, and data entry such that data similar in appearance shall have a consistent meaning throughout the TDMS. This requirement shall apply to displays provided from the Contractor&#8217;s standard offering and displays developed specifically for the Authority as part of this contract.
+16.6.2 Display Generation and Editing
+An interactive display generation and editing tool shall be provided for creating the operational displays and interfaces associated with each application. With this tool, the user shall draw (rather than code) the contents of application windows, define dynamic linkages to any TDMS data, and sensitize display elements to respond to user input actions (such sensitized elements are typically referred to as cursor targets and function keys). The ability to link to any TDMS data, not only real-time data, shall allow interactive graphic displays to be constructed for all applications in the TDMS via the display building tool.
+16.6.3 Display Elements
+Displays shall be composed of the following display elements:
+1) Text.
+2) Drawing primitives (polylines, polygons, arcs, circles, ellipses, etc.).
+3) Bit-mapped images.
+4) Formatted data items.
+16.6.3.1 Data Presentation
+The user, during the interactive display definition process, shall logically identify individual dynamic data fields and data arrays in defined displays. All linkages to the database necessary for ensuring the proper retrieval and output of the dynamic data or data arrays during actual use of the display shall be automatically established according to this identification. The linkages between the displays and the database shall be by logical identification (for example, point name or point identifier) and shall be designed such that any database modifications (even those resulting in insertions into tables/files and changes in table/file sizes) do not require redefinition of existing displays.
+16.6.3.2 Quality Code and Tag Presentation]
+16.6.3.3 Data Sets
+Selected displays will be defined with the intent of presenting data from different &#8220;data sets.&#8221; A data set is, for the purposes of this requirement, defined as a collection of data produced by an application representing the state of the power system. It shall also be possible to simultaneously display data from the real-time data set and data from any of the other data sets on the same display.
+16.6.3.4 Display Macros
+Macros form an arbitrarily complex hierarchy of display elements, primitives, symbols, and other macros. Display macros shall be created with an editor designed for this purpose. It shall be convenient to switch back and forth between macro editing and display editing. The editor shall support an arbitrary number of sharable macro libraries. Changes made to macros shall automatically be reflected in all displays that use the macro once the macro is installed in a system.
+16.6.3.5 Display Layers
+World coordinate displays shall be constructed in layers. Each layer shall be a self-contained world co-ordinate space onto which display elements, including data, shall be placed. Layers shall be displayed in a defined order, with higher-order layers overlaying lower-order layers. Where displayable elements of a multiple layers occupy the same space, the higher-order layer elements shall be displayed. Otherwise, the elements of the lower-order layers shall be visible.
+16.6.3.6 User Interaction
+Cursor targets shall send a message to an application or issue a command when events (such as a user action) occur. The TDMS shall support the following commands via user interaction:
+1) Call a display (in the window of the calling command or in a new window as defined for the command). Page forward and backward commands shall be considered special cases of display call interaction, where the sequence of displays shall be part of the display definition.
+16.7 Display Types
+The Contractor shall be responsible for providing all TDMS displays. As a minimum, the display types described below shall be provided.
+16.7.1 Power System World-Map Displays
+World coordinate displays showing geographical and schematic views of the Authority&#8217;s power system shall be provided. As background, these displays shall be capable of being supported by Google Maps
+or their equivalent. As a minimum, the elements of the power system shall include generators, substations, transformers, circuit breakers, line reclosers, switches, disconnects, reactors, capacitors, feeders, line recloser/regulators, Var controllers, feeder remote controlled switches, fuses, and customer service drops.
+Telemetered and calculated data shall be presented on these world-map displays. Flows such as Amperes, Watts, and Vars shall be displayed as values with direction arrows. In addition, the symbols used to represent the elements of the power system shall reflect the presence of alarms and other abnormal operating conditions. This shall include the use of highlighting to distinguish elements that have exceeded loading limits and different colors to distinguish elements that have been de-energized.
+16.7.2 Substation One-Line Displays
+Substation one-line displays show the interconnected elements of individual substations. The elements shall include buses, incoming and outgoing lines, transformer banks, circuit breakers, line reclosers, capacitor banks, and disconnects, etc. The displays shall present telemetered and calculated data, including all alarm conditions. Highlighting and colors used to distinguish the operating states of the different substation elements shall be consistent with all other one-line displays. The user shall be able to interact with the substation one-line displays to perform any associated user interactions such as data entry and supervisory control.
+The user shall be able to navigate to other substation displays from poke points on transmission line segments on the one-line. The user shall also be able to call-up the associated substation tabular display from a poke point on the one-line.
+16.7.3 Other One-Line Displays
+Other one-line displays may be provided to show the power system to the Dispatcher. For example, one-line displays may be provided of major sub-transmission and distribution circuits. The characteristics of these displays shall be the same as the power system world-map displays and the substation one-line displays.
+16.7.4 Substation Tabular
+Substation tabular displays list the value of telemetered and calculated data associated with each substation as well as related information such as alarm limits. The user shall be able to interact with the substation tabular displays to perform any associated user interactions such as data entry and supervisory control. The user shall be able to call-up the associated substation one-line display from a poke point located on the tabular display.
+16.7.5 Power Quality Tabular
+These displays shall list the power quality data associated with customers. This data shall be based on Smart Meter reads that the TDMS receives from the Authority&#8217;s MDMS or AMI Head-End Systems (HESs). Related information such as alarm limit violations shall also be listed. The user shall be able to interact with the tabular displays to perform any associated user interactions such as data entry and supervisory control.
+16.7.6 Other Tabular Displays
+Other tabular displays that contain telemetered and calculated data may be associated with Contractor or Authority-provided application programs. Tabular displays of power system circuits shall be included. The user shall be able to interact with these tabular displays to perform user interactions such as data entry, application function execution, and display call-up.
+16.7.7 One-Line Menu
+These displays shall provide one-line menus for substations and power system circuits. Each entry in a menu shall allow selection of the associated one-line display. Entries shall be listed in a logical order approved by the Authority, e.g., entries for substation one-lines by name, entries for circuit one-lines by substation name and voltage class.
+16.7.8 Access Control Display
+This display shall allow designated and properly authorized personnel to control user access to the TDMS such as enter, modify, and delete user IDs and passwords and to assign workstation AORs and operating modes.
+16.7.9 Menu Directory Display
+This display shall list all menu displays in alphabetical order. Each entry in the list shall have a cursor target for menu selection.
+16.7.10 TDMS Directory Display
+This display shall list all TDMS displays in alphabetical order. Each entry in the list shall have a cursor target for display selection.
+16.7.11 TDMS Configuration Monitoring and Control
+These displays shall allow the user to monitor and control the TDMS configuration. The displays shall:
+1) Present all equipment and communication link status and associated alarms.
+2) Provide menus or cursor targets for performing actions such as failover, switching local and remote devices (such as workstations, servers, and field device interfaces), switching communication channels, controlling the TDMS resource monitoring function.
+3) Present processor and communication channel loading and error statistics.
+16.7.12 Summary Displays
+Summary displays shall present power system and TDMS conditions. Unless indicated otherwise in the following specific requirements for individual summary displays, user interaction with the displays shall be limited to filtering and sorting the data presented in the displays. The TDMS shall support filtering by:
+1) AOR.
+2) Location (e.g., substation or feeder).
+3) Point name.
+16.7.12.1 Alarm Summary
+A single user action shall be used to call an alarm summary that presents only those alarms for the AORs assigned to the user. All alarms in all classes shall be presented. The TDMS shall also include facilities to call a general alarm summary, with a single user action, that will present all alarms in all AORs.
+16.7.12.2 Event Summary
+The event summary shall be similar to the alarm summary with the exception that all alarms and events (such as supervisory control commands, tag placement, and data management actions) shall be listed. Events shall be removed from the event summary only when the capacity of the display is exceeded. The oldest events shall be removed as new events are listed.
+16.7.12.3 Off-Normal Summary
+This display shall list devices and values that are not in their normal state. Telemetered, calculated, and manually entered status, analog, and accumulator data points shall be included. The displays shall show the off-normal data points in the following groups:
+16.7.13 Communication Maintenance Displays
+16.7.14 Application Program Displays
+16.8 Trend Displays
+16.9 Other Displays
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>18. SCADA Functions</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>18. SCADA Functions</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-Representation"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-Representation" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">18. SCADA Functions
+The TDMS requirements that concern SCADA related functions such as Data Acquisition, Data Exchange, Data Processing, Supervisory Control, Load Shedding and Restoration, and Switching Order Management are presented in this clause. Relevant capacity and performance requirements for these functions are presented in Clause 15.
+18.1 Data Acquisition
+The TDMS shall collect real-time telemetered data from the following data sources:
+1) Field device interfaces at substation sites - These are the Substation Remote Terminal Units (SRTUs) and Computer-based Substation Control System (CSCS) Interfaces.
+18.2 TASE.2 Implementation
+18.3 Data Processing
+TDMS data processing shall support the following types of data:
+18.4 Equipment Outage Scheduling
+18.5 Tagging
+Tags are conditions applied to database values to call user attention to exception conditions for field device interfaces and to inhibit supervisory control actions.
+18.5.1 Tag Types and Supervisory Control Inhibit
+The TDMS shall support the number of tag types and the number of tags to be set on an individual point basis (also refer to Exhibit 15-8). The Authority shall order each tag type to indicate its relative priority to other types.
+The tag types shall be defined to correspond with the Authority&#8217;s field device interface tagging. The definition shall include the tag type name (such as, warning, caution, hot line, and do not operate) and any of the following user selected control-inhibit properties:
+1) All control allowed.
+2) Control inhibited in one direction, such as close.
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
