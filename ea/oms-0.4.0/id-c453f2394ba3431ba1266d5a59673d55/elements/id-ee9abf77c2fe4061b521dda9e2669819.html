@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>User interface </title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>User interface </b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-BusinessObject"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-BusinessObject" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">User interface 
+
+1.	Demonstrate desktop layout configuration/ management
+2.	Demonstrate areas of responsibility functionality
+3.	Demonstrate tabular displays filtering, sorting and user configurable capabilities
+4.	Demonstrate capability to autogenerate one-line circuit schematic diagrams based on geographic data
+5.	Demonstrate the circuit tracing capabilities including upstream, downstream, to source, to next switching device, to open points, etc.
+6.	Demonstrate search / find capabilities (transformers, switches, customers, addresses, intersections, etc.)
+7.	Demonstrate dynamic topological coloring and abnormal topology coloring and indication
+8.	Demonstrate web application layout configuration/management
+9.	Demonstrate web application tabular displays filtering, sorting and user configurable capabilities
+10.	Demonstrate web application circuit tracing capabilities including upstream, downstream, to source, to next switching device, to open points, etc.
+11.	Demonstrate web application search / find capabilities (transformers, switches, customers, addresses, intersections, etc.)
+12.	Demonstrate web application dynamic topological coloring and abnormal topology coloring and indication
+13.	Demonstrate mobile application user interface, including access to network displays, tracing capabilities, search capability, etc.
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

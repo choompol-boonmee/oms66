@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Network Model Maintenance</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Network Model Maintenance</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-BusinessObject"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-BusinessObject" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">Network Model Maintenance
+
+Starting point should be existing model from ADMS system that includes substations, MV feeders and schematics to speed up project execution. 
+
+Our proposal is to leverage automatic synchronization of the network model between the two SE systems, that is developed for the cases when we have two separate systems (ADMS and EMS or ADMS and DERMS) both provided by SE. With small modification, this process can be used in this situation when ADMS and OMS systems are separated. It enables that changes to the network model are done in one place, on the source system (in this case ADMS), and upon completion of model promotion, for configured set of network containers, same changes are transferred as CIM xml file to the destination system(s), in this case OMS, where they are promoted by the user. 
+
+So, it should be expected that OMS system should be able to process CIM files in format provided by existing ADMS, containing changes for both MV feeders and substation internals. That will significantly reduce effort for PEA personnel in maintenance of network model in OMS system, as whole process of import and validation would be done only once (in ADMS side), and OMS system would just reuse it. It will also provide better alignment in models of both systems as they would be updated at the same time.
+
+It will also be beneficial if single line diagrams from ADMS can be imported to OMS system to avoid unnecessary manual work in drawing SLD again in OMS system.
+
+OMS system should be able to reuse of ICCP configuration from ADMS system to OMS system. ADMS system can provide export of ICCP configuration, and it should significantly reduce manual effort if this export can be imported to OMS systems
+
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

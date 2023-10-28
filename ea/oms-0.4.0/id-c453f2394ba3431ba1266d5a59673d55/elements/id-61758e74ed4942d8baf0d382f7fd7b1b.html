@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>FLISR</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>FLISR</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-BusinessObject"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-BusinessObject" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">FLISR
+
+Automatic FLISR has full value on ADMS system, where it can quickly react and isolate the fault and restore power using remote switches. But manual FLISR can provide some benefits on the OMS system as well, as a supporting tool that can be used by the operators in cases of some larger outages in the depth of the feeder, where suggesting for isolation and restoration variants based on Load Flow results can speed up operator work and help him make better and faster decisions. This benefit can be achieved if manual FLISR module is fully integrated into OMS system.
+One addition to this process that can bring extra value is the integration that can transfer detected fault location by FLISR that is run on ADMS system to the OMS side so that OMS operators are aware in which area to organize reparation work. There, fault locations will be recognized by the FLISR if it is manually run on the OMS system.
+
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

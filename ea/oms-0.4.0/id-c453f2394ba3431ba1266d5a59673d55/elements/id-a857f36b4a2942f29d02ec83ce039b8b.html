@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Switching management</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Switching management</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-elementtype-BusinessObject"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-BusinessObject" target="hint"></a>
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap">Switching management
+
+2.	Demonstrate creation of work request for planned works on electrical asset 
+3.	Demonstrate automatic creation of switching plan based on information from work request
+4.	Demonstrate visualization of switching management documents and switching steps in the network view
+5.	Demonstrate scheduling capabilities (automatic clash checking, Gantt chart, etc.)
+6.	Demonstrate approval of switching plan (multiple levels of approval, switching validations, outage report)
+7.	Demonstrate process for modifying switching plan after approval
+8.	Demonstrate execution of switching plan including execution of remote and manual steps
+9.	Demonstrate execution of switching by field crew on mobile application
+10.	Demonstrate issuing and returning of safety document
+11.	Demonstrate various capabilities for manual creation of switching plan and speeding up process for switching plan writing
+12.	Demonstrate validation of switching plan in Study mode
+13.	Demonstrate how commissioning of new network parts (e.g., commissioning of new distribution transformer) shall be performed as part of switching plan process
+14.	Demonstrate live line work (e.g., tree trimming) process in switching management
+15.	Demonstrate configurability of Switching Management
+</div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
